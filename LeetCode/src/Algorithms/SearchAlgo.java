@@ -1,6 +1,6 @@
 package Algorithms;
 
-public class BinarySearch {
+public class SearchAlgo {
 	
 	static int search(int[] nums, int target) {
         
