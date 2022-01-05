@@ -29,3 +29,10 @@ public class IsUniqueString {
 	}
 
 } //Time complexity for the code is O(n), where n is the string length. Space complexity is O(1).
+
+/*If we do not use additional data structures, then we would need to compare every character of the string to 
+every other character. This will take O(n^2) time and O(1) space.*/
+
+/*If we can modify the input string, then we can also sort the string and look for duplicate neighboring
+ characters. This sorting might take additional space though. The time complexity 
+ for this would be O(nlogn).*/
