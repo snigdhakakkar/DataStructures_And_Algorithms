@@ -140,6 +140,33 @@ public class DoublyLinkedList_implementation {
 		}
 	}
 	
+	//Delete a given node
+	public static void deleteNode(Node del) {
+		// Base case
+		if (head == null || del == null) {
+			return;
+		} 
+		// If node to be deleted is head node
+		if (head == del) 
+		{
+			head = del.next;
+		}
+		// Change next only if node to be deleted
+		// is NOT the last node
+		if (del.next != null) {
+			del.next.prev = del.prev;
+		}
+		
+		// Change previous only if node to be deleted
+        // is NOT the first node
+		if (del.prev != null) {
+            del.prev.next = del.next;
+        }
+		
+		// Finally, free the memory occupied by del
+        return;		
+	}
+	
 	/* Driver program to test above functions*/
 	public static void main(String[] args) {
 		/* Start with the empty list */
@@ -152,17 +179,26 @@ public class DoublyLinkedList_implementation {
         // linked list becomes 7->6->NULL
 		DLL.push(7);
 		
+		// Insert 2. So linked list becomes 2->7->6->NULL
+        DLL.push(2);
+		
 		// Insert 4 at the end. So linked 
-        // list becomes 7->6->4->NULL
+        // list becomes 2->7->6->4->NULL
 		DLL.append(4);
 		
 		// Insert 8, after 7. So linked 
-        // list becomes 1->7->8->6->4->NULL
+        // list becomes 2->7->8->6->4->NULL
 		DLL.InsertAfter(DLL.head.next, 8);
 		
 		// Insert 5, before 8.So linked
-        // list becomes 1->7->5->8->6->4
+        // list becomes 2->7->5->8->6->4
 		DLL.InsertBefore(DLL.head.next.next, 5);
+		
+		//delete the FIRST node, LIST BECOMES 7->5->8->6->4
+		DLL.deleteNode(DLL.head);
+		
+		// Deleting middle node from 7->5->8->6->4
+		DLL.deleteNode(DLL.head.next.next);
 		
 		System.out.println("Created DLL is: ");
 		DLL.printlist(DLL.head);
