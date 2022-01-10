@@ -18,6 +18,8 @@ public class LinkedListNode {
 		data = d;
 	}
 	
+	public LinkedListNode() { }
+	
 	public void setNext(LinkedListNode n) {
 		next = n;
 		if(this == last) {
@@ -52,5 +54,13 @@ public class LinkedListNode {
 		
 		LinkedListNode head2 = new LinkedListNode(data, next2, null);
 		return head2;
+	}
+	
+	public static int length(LinkedListNode l) {
+		if (l == null) {
+			return 0;
+		} else {
+			return 1 + length(l.next);
+		}
 	}
 }
