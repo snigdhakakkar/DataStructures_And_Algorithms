@@ -2,7 +2,7 @@ package LinkedList;
 
 public class RotateClockwise {
 	
-	public static Linked rotateRight(Linked head, int k) {
+	public static Node rotateRight(Node head, int k) {
         if (head == null || k < 0) {
             return head;
         }
@@ -14,7 +14,7 @@ public class RotateClockwise {
             return head;
         }
         
-        Linked tmp = head;
+        Node tmp = head;
         int i = 1;
         
         while (i < sizeOfList - k) {
@@ -22,8 +22,8 @@ public class RotateClockwise {
             i++;
         }
         
-        Linked temp = tmp.next;
-        Linked newHead = temp;
+        Node temp = tmp.next;
+        Node newHead = temp;
         tmp.next = null;
         
         i = 1;
@@ -35,7 +35,7 @@ public class RotateClockwise {
         return newHead;
     }
     
-    public static int getSizeOfList(Linked head) {
+    public static int getSizeOfList(Node head) {
         if (head == null) {
             return 0;
         }
@@ -43,24 +43,24 @@ public class RotateClockwise {
     }
     
     public static void main(String[] args) {
-    	Linked head = null;
-    	Linked a = new Linked();
+    	Node head = null;
+    	Node a = new Node();
     	
-    	head = a.insert(head, 12);
-    	head = a.insert(head, 99);
-    	head = a.insert(head, 37);
-    	head = a.insert(head, 8);
-    	head = a.insert(head, 18);
+    	head = Node.insert(head, 12);
+    	head = Node.insert(head, 99);
+    	head = Node.insert(head, 37);
+    	head = Node.insert(head, 8);
+    	head = Node.insert(head, 18);
     	
     	a.printList(head);
     	System.out.println();
     	
-    	head = a.rotateRight(head, 2);
+    	head = rotateRight(head, 2); 
     	
     	a.printList(head);
     	System.out.println();
     	
     }
     
-    }
+ }
 
