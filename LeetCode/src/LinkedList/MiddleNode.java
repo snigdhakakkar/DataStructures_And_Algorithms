@@ -15,11 +15,11 @@ public class MiddleNode {
             b = b.next.next;
         }
         
-        int sizeOfList = Node.getSizeOfList(head);
+//        int sizeOfList = Node.getSizeOfList(head);
         
-        if(sizeOfList % 2 == 0) { 
-            return a.next;
-        }
+//        if(sizeOfList % 2 == 0) { 
+//            return a.next;
+//        }
         
         return a;
         
