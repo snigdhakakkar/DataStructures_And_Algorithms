@@ -21,11 +21,11 @@ public class UnionOfTwoListsUsingHashing {
     	
     	Node head1 = null;
     	
-    	head1 = Node.insert(head1, 22);
-		head1 = Node.insert(head1, 3);
+    	head1 = Node.insert(head1, 2);
+		head1 = Node.insert(head1, 13);
     	head1 = Node.insert(head1, 10);
-    	head1 = Node.insert(head1, 3);
-    	head1 = Node.insert(head1, 13);
+    	head1 = Node.insert(head1, 27);
+    	head1 = Node.insert(head1, 36);
     	
     	Node union = getUnionOfTheTwoLinkedLists(head, head1); 
     	
