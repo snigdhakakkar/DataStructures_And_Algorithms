@@ -13,6 +13,7 @@ public class Linked {
 		ListNode a = new ListNode();
 		a.next = null;
 		a.right = null;
+		a.child = null;
 		a.data = key;
 		return a;
 	}
@@ -36,6 +37,20 @@ public class Linked {
 		System.out.print(node.data + " ");
 		printLinkedList(node.next);
 	}
+	
+	
+	//create linked list from array
+	
+	public ListNode createList(int arr[]) {
+		ListNode node = null;
+		
+		for (int i = 0; i < arr.length; i++) {
+			node = insert(node, arr[i]);
+		}
+		
+		return node;
+	}
+	
 	
 	
 
