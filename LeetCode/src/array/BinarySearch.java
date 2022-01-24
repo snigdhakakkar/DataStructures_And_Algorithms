@@ -14,7 +14,7 @@ public class BinarySearch {
 		}
 	}
 	
-	public static int searchIndex(int[] a, int val, int start, int end) {
+	public int searchIndex(int[] a, int val, int start, int end) {
 		if(a.length == 0 || start > end) {
 			return -1;
 		}

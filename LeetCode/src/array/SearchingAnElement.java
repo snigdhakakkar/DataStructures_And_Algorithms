@@ -7,7 +7,7 @@ public class SearchingAnElement {
 		
 		SearchingAnElement s = new SearchingAnElement();
 		
-		int i = searchIndex(a, 34);
+		int i = s.searchIndex(a, 34);
 		
 		if(i == -1) {
 			System.out.println("value does not exist in the array.");
@@ -17,7 +17,7 @@ public class SearchingAnElement {
 		
 	}
 	
-	public static int searchIndex(int[] a, int val) {
+	public int searchIndex(int[] a, int val) {
 		if(a.length == 0) {
 			return -1;
 		}
