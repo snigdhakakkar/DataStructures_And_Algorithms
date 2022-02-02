@@ -24,7 +24,7 @@ public class MostFrequentUsedWordsInAString {
 	//Count map - tree map
 	
 	public List<String> mostFrequentwords(String str) {
-		str = str.replaceAll("^a-zA-Z0-9", " ");
+		str = str.replaceAll("[^a-zA-Z0-9]", " ");
 		String[] words = str.split(" +");
 		
 		Map<String, Integer> countMap = new HashMap<>();

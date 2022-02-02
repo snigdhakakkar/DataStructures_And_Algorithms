@@ -30,7 +30,7 @@ public class GetMostFrequentWordAfterExcludingGivenWords {
 	
 	public List<String> mostFrequentwordsAfterExcludingGivenWords(String str, String[] excluded_words){
 		
-		str = str.replaceAll("^a-zA-Z0-9", " ");
+		str = str.replaceAll("[^a-zA-Z0-9]", " ");
 		String[] allWords = str.split(" +");
 		
 		Map<String, Integer> countMap = new HashMap<>();
