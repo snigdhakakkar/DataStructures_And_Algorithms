@@ -2,8 +2,8 @@ package LinkedList;
 
 public class Node {
 	
-	int i;
-	Node next;
+	public int i;
+	public Node next;
 	
 	private static Node getNewNode(int i) {
 		Node newNode = new Node();
