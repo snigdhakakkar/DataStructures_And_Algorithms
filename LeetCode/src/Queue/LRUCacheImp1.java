@@ -11,6 +11,7 @@ public class LRUCacheImp1 {
 	Map<Integer, CacheEntry> map = new HashMap<>();
 	int Cache_Size = 3;
 	
+	//Time complexity: O(1); Space complexity: O(N)
 	public String getFromCache(int key) {
 		if(map.containsKey(key)) {
 			CacheEntry entry = map.get(key);
