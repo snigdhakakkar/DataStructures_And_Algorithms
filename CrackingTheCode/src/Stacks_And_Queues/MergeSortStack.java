@@ -7,15 +7,15 @@ public class MergeSortStack {
 	public static void main(String [] args) {
 		Stack<Integer> s = new Stack<Integer>();
 		
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < 4; i++) {
 			int r = randomIntInRange(0,  1000);
 			s.push(r);
 		}
 		
-		mergesort(s);
+		Stack<Integer> r = mergesort(s);
 		
-		while(!s.isEmpty()) {
-			System.out.println(s.pop());
+		while(!r.isEmpty()) {
+			System.out.println(r.pop());
 		}
 	}
 	
@@ -66,10 +66,4 @@ public class MergeSortStack {
 		}
 		return reverseStack;
 	}
-	
-	
-	
-	
-	
-
 }
