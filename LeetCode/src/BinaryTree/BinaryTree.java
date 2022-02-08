@@ -67,5 +67,17 @@ public class BinaryTree {
 		return 1 + getNumberOfNodes(node.left) + getNumberOfNodes(node.right);
 	}
 	
+	public int getNumberOfLeafNodes(Node node) {
+		if(node == null) {
+			return 0;
+		}
+		
+		if(node.left == null && node.right == null) {
+			return 1;
+		}
+		
+		return getNumberOfLeafNodes(node.left) + getNumberOfLeafNodes(node.right);
+	}
+	
 
 }
