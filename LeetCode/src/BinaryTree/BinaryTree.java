@@ -79,5 +79,18 @@ public class BinaryTree {
 		return getNumberOfLeafNodes(node.left) + getNumberOfLeafNodes(node.right);
 	}
 	
+	public int getHeightOfTheTree(Node node) {
+		//height is the maximum number of edges from leaf node to the given node
+		if(node == null) {
+			return -1;
+		}
+		
+		return max(getHeightOfTheTree(node.left), getHeightOfTheTree(node.right)) + 1;
+	}
+	
+	private int max(int a, int b) {
+		return a > b ? a : b;
+	}
+	
 
 }
