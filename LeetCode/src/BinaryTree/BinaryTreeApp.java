@@ -30,5 +30,7 @@ public class BinaryTreeApp {
 	System.out.println("Sum of all the nodes: " + a.getSumOfNodes(root));
 	
 	System.out.println("Difference of even and odd nodes: " + a.getDifferenceEvenOddValues(root));
+	
+	System.out.println("Total number of nodes in the tree: " + a.getNumberOfNodes(root));
 	}
 }

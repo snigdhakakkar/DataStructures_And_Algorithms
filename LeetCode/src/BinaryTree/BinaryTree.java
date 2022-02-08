@@ -59,5 +59,13 @@ public class BinaryTree {
 		return node.data - getDifferenceEvenOddValues(node.left) - getDifferenceEvenOddValues(node.right);
 	}
 	
+	public int getNumberOfNodes(Node node) {
+		if(node == null) {
+			return 0;
+		}
+		
+		return 1 + getNumberOfNodes(node.left) + getNumberOfNodes(node.right);
+	}
+	
 
 }
