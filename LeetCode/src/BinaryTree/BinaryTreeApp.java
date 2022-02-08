@@ -27,7 +27,6 @@ public class BinaryTreeApp {
 	a.postorder(root);
 	System.out.println();
 	
-	
+	System.out.println("Sum of all the nodes: " + a.getSumOfNodes(root));
 	}
-
 }
