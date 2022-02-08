@@ -42,6 +42,14 @@ public class BinaryTree {
 		System.out.print(node.data + " ");
 	}
 	
+	public int getSumOfNodes(Node node) {
+		if(node == null) {
+			return 0;
+		}
+		
+		return node.data + getSumOfNodes(node.left) + getSumOfNodes(node.right);
+	}
+	
 	
 
 }
