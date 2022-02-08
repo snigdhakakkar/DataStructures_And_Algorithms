@@ -13,6 +13,21 @@ public class BinaryTreeApp {
 		root.left.right.right = a.createNewNode(11);
 		root.right.right = a.createNewNode(9);
 		root.right.right.left = a.createNewNode(4);
+	
+	
+	System.out.print("Inorder:" );
+	a.inorder(root);
+	System.out.println();
+	
+	System.out.print("Preorder:" );
+	a.preorder(root);
+	System.out.println();
+	
+	System.out.print("Postorder:" );
+	a.postorder(root);
+	System.out.println();
+	
+	
 	}
 
 }
