@@ -328,6 +328,22 @@ public class BinaryTree {
 			System.out.print(s2.pop().data + " ");
 		}
 	}
+	
+	public Node convertToItsMirrorTree(Node node) {
+		if(node == null) {
+			return null;
+		}
+		
+		Node t = node.left;
+		node.left = node.right;
+		node.right = t;
+		
+		convertToItsMirrorTree(node.left);
+		convertToItsMirrorTree(node.right);
+		
+		return node;
+		
+	}
 
 
 	

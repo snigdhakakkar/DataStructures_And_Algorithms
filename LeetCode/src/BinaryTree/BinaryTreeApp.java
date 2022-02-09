@@ -66,5 +66,9 @@ public class BinaryTreeApp {
 	
 	a.postOrderUsingStack(root);
 	System.out.println();
+	
+	Node mirror = a.convertToItsMirrorTree(root);
+	a.inorder(mirror);
+	System.out.println();
 	}
 }
