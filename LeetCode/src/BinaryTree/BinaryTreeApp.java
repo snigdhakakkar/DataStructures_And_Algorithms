@@ -54,5 +54,8 @@ public class BinaryTreeApp {
 	
 	a.leftViewOfTree(root, 0);
 	System.out.println();
+	
+	a.rightViewOfTree(root, 0);
+	System.out.println();
 	}
 }

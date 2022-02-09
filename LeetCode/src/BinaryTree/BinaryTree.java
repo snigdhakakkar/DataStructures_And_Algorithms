@@ -237,6 +237,21 @@ public class BinaryTree {
 		leftViewOfTree(node.left, level + 1);
 		leftViewOfTree(node.right, level + 1);
 	}
+	
+	public int maxLevel1;
+	public void rightViewOfTree(Node node, int level) {
+		if(node == null) {
+			return;
+		}
+		
+		if(level >= maxLevel1) {
+			System.out.print(node.data + " ");
+			maxLevel1++;
+		}
+		
+		rightViewOfTree(node.right, level + 1);
+		rightViewOfTree(node.left, level + 1);
+	}
 
 	
 
