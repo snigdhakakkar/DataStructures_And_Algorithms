@@ -2,6 +2,7 @@ package BinaryTree;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 public class BinaryTree {
 	
@@ -156,6 +157,36 @@ public class BinaryTree {
 			System.out.println();
 		}
 		
+	}
+	
+	public void reverseLevelOrderTraversalWithoutRecursion(Node node) {
+		if(node == null) {
+			return;
+		}
+		
+		Queue<Node> q = new LinkedList<Node>();
+		
+		q.add(node);
+		
+		Stack<Node> s = new Stack<Node>();
+		
+		while(q.size() > 0) {
+			Node t = q.remove();
+			
+			if(t.right != null) {
+				q.add(t.right);
+			}
+			
+			if(t.left != null) {
+				q.add(t.left);
+			}
+			
+			s.push(t);
+		}
+		
+		while(s.size() > 0) {
+			System.out.print(s.pop().data + " ");
+		}
 	}
 	
 
