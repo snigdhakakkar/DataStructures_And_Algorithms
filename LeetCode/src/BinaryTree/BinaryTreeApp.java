@@ -28,19 +28,22 @@ public class BinaryTreeApp {
 	System.out.println();
 	
 	System.out.println("Sum of all the nodes: " + a.getSumOfNodes(root));
-	
+	System.out.println();
 	System.out.println("Difference of even and odd nodes: " + a.getDifferenceEvenOddValues(root));
-	
+	System.out.println();
 	System.out.println("Total number of nodes in the tree: " + a.getNumberOfNodes(root));
-	
+	System.out.println();
 	System.out.println("Total number of leaf nodes in the tree: " + a.getNumberOfLeafNodes(root));
-	
+	System.out.println();
 	System.out.println("Height of the tree: " + a.getHeightOfTheTree(root));
-	
+	System.out.println();
 	a.printAtGivenLevel(root, 1);
-	
+	System.out.println();
 	a.levelOrderTraversalUsingRecursion(root);
-	
+	System.out.println();
 	a.levelOrderTraversalUsingQueue(root);
+	System.out.println();
+	a.reverseLevelOrderTraversalUsingRecursion(root);
+	System.out.println();
 	}
 }
