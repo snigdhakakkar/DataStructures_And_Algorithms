@@ -51,5 +51,8 @@ public class BinaryTreeApp {
 	
 	a.levelOrderTraversalLineByLineWithoutRecursion(root);
 	System.out.println();
+	
+	a.leftViewOfTree(root, 0);
+	System.out.println();
 	}
 }
