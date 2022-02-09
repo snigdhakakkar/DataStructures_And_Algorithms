@@ -40,5 +40,7 @@ public class BinaryTreeApp {
 	a.printAtGivenLevel(root, 1);
 	
 	a.levelOrderTraversalUsingRecursion(root);
+	
+	a.levelOrderTraversalUsingQueue(root);
 	}
 }
