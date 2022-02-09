@@ -106,5 +106,17 @@ public class BinaryTree {
 		
 	}
 	
+	public void levelOrderTraversalUsingRecursion(Node node){
+		if(node == null) {
+			return;
+		}
+		
+		int height = getHeightOfTheTree(node);
+		for(int i = 0; i <= height; i++) {
+			printAtGivenLevel(node, i+1);
+			System.out.println();
+		}
+	}
+	
 
 }

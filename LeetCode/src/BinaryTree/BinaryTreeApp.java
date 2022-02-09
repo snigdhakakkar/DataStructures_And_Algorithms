@@ -38,5 +38,7 @@ public class BinaryTreeApp {
 	System.out.println("Height of the tree: " + a.getHeightOfTheTree(root));
 	
 	a.printAtGivenLevel(root, 1);
+	
+	a.levelOrderTraversalUsingRecursion(root);
 	}
 }
