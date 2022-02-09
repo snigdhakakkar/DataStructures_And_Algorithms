@@ -60,5 +60,8 @@ public class BinaryTreeApp {
 	
 	a.inOrderUsingStack(root);
 	System.out.println();
+	
+	a.preOrderUsingStack(root);
+	System.out.println();
 	}
 }
