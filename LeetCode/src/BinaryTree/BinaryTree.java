@@ -299,6 +299,35 @@ public class BinaryTree {
 			}
 		}
 	}
+	
+	public void postOrderUsingStack(Node node) {
+		if(node == null) {
+			return;
+		}
+		
+		Stack<Node> s1 = new Stack<Node>();
+		Stack<Node> s2 = new Stack<Node>();
+		
+		s1.push(node);
+		
+		while(s1.size() > 0) {
+			Node t = s1.pop();
+			
+			if(t.left != null) {
+				s1.push(t.left);
+			}
+			
+			if(t.right != null) {
+				s1.push(t.right);
+			}
+			
+			s2.push(t);
+		}
+		
+		while(s2.size() > 0) {
+			System.out.print(s2.pop().data + " ");
+		}
+	}
 
 
 	
