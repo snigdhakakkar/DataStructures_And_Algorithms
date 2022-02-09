@@ -48,5 +48,8 @@ public class BinaryTreeApp {
 	
 	a.reverseLevelOrderTraversalWithoutRecursion(root);
 	System.out.println();
+	
+	a.levelOrderTraversalLineByLineWithoutRecursion(root);
+	System.out.println();
 	}
 }
