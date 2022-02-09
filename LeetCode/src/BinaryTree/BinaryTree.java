@@ -252,6 +252,30 @@ public class BinaryTree {
 		rightViewOfTree(node.right, level + 1);
 		rightViewOfTree(node.left, level + 1);
 	}
+	
+	public void inOrderUsingStack(Node node) {
+		if(node == null) {
+			return;
+		}
+		
+		Stack<Node> s = new Stack<Node>();
+		while(node != null) {
+			s.push(node);
+			node = node.left;
+		}
+		
+		while(s.size() > 0) {
+			Node t = s.pop();
+			System.out.print(t.data + " ");
+			if(t.right != null) {
+				Node tmp = t.right;
+				while(tmp != null) {
+					s.push(tmp);
+					tmp = tmp.left;
+				}
+			}
+		}
+	}
 
 	
 

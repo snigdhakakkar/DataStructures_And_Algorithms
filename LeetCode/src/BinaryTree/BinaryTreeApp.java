@@ -57,5 +57,8 @@ public class BinaryTreeApp {
 	
 	a.rightViewOfTree(root, 0);
 	System.out.println();
+	
+	a.inOrderUsingStack(root);
+	System.out.println();
 	}
 }
