@@ -18,6 +18,7 @@ public class PrintElementsInLevelOrderTraversal {
 		levelOrderTraversalUsingRecursion(root);
 	}
 	
+	//Time complexity: O(N^2)
 	public static void levelOrderTraversalUsingRecursion(Node node){
 		if(node == null) {
 			return;
