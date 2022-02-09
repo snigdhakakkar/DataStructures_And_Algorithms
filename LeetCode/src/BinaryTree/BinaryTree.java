@@ -92,5 +92,19 @@ public class BinaryTree {
 		return a > b ? a : b;
 	}
 	
+	public void printAtGivenLevel(Node node, int level) {
+		if(node == null) {
+			return;
+		}
+		
+		if(level == 1) {
+			System.out.print(node.data + " ");
+			return;
+		}
+		printAtGivenLevel(node.left, level - 1);
+		printAtGivenLevel(node.right, level - 1);
+		
+	}
+	
 
 }
