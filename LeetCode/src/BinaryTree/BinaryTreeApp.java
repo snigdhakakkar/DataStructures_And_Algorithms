@@ -70,5 +70,8 @@ public class BinaryTreeApp {
 	Node mirror = a.convertToItsMirrorTree(root);
 	a.inorder(mirror);
 	System.out.println();
+	
+	a.topViewOfTree(root);
+	System.out.println();
 	}
 }
