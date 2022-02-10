@@ -73,5 +73,8 @@ public class BinaryTreeApp {
 	
 	a.topViewOfTree(root);
 	System.out.println();
+	
+	a.bottomViewOfTree(root);
+	System.out.println();
 	}
 }
