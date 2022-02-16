@@ -18,7 +18,7 @@ public class GetRightNodeOfAGivenValueAtSameLevel {
 		
 		//time complexity: O(N), space complexity: O(1)
 		getRightNodeOfAGivenValueAtSameLevelRecursive(root, 6);
-		System.out.println(rightNode1);
+		System.out.println(rightNode1.data);
 		
 		//time complexity: O(N), space complexity: O(N)
 		Node rightNode = getRightNodeOfAGivenValueAtSameLevelIterative(root, 6);
@@ -67,7 +67,7 @@ public class GetRightNodeOfAGivenValueAtSameLevel {
 				return;
 			}
 			
-			if(level == 1 && node.data == key) {
+			if(level == 1 && (node.data == key || flag)) {
 				if(flag) {
 					rightNode1 = node;
 					return;
