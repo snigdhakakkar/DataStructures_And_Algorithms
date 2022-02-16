@@ -19,7 +19,7 @@ public class GetClosestLeafNodeDistanceFromAGivenValue {
 
 	}
 	
-	//time complexity: O(N) * height of tree, space complexity: O(N)
+	//time complexity: O(N) * height of tree, space complexity: O(height of the tree)
 	public static int getClosestLeafNodeDistance(Node node, int val) {
 		
 		if(node == null) {
