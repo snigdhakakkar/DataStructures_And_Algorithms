@@ -31,7 +31,7 @@ public class ConnectNodesAtSameLevelUsingNextPointerAnotherSolution {
 					if(tmp.right != null) {
 						tmp.left.next = tmp.right;
 					} else {
-						tmp.right = getNextRight(tmp);
+						tmp.left.next = getNextRight(tmp);
 					}
 				}
 				
