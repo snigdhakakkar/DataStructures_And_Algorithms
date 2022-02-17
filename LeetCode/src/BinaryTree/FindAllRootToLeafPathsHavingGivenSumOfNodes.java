@@ -20,7 +20,7 @@ public class FindAllRootToLeafPathsHavingGivenSumOfNodes {
 		
 	}
 	
-	//time complexity: O(N); space complexity: O(N)
+	//time complexity: O(N); space complexity: O(N) + NlogN
 	public static List<List<Integer>> findRootToLeafPathsHavingGivenSumOfNodes(Node node, int sum) {
 		
 		List<List<Integer>> allSumPathList = new ArrayList<>();
