@@ -13,6 +13,7 @@ public class BinaryTree {
 		a.data = val;
 		a.left = null;
 		a.right = null;
+		a.next = null;
 		return a;
 	}
 	
