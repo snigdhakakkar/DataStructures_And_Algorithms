@@ -21,6 +21,8 @@ public class CheckIfAValueExistsInABST {
 		
 	}
 	
+	//In BST, at any point we are traversing either the left of the node or the right of the node, hence 
+	//time complexity of search in BST is logN
 	public static boolean checkIfValueExists(Node node, int val) {
 		if(node == null) {
 			return false;
