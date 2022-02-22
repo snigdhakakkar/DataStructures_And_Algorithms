@@ -4,7 +4,6 @@ public class DeleteANodeOfABST {
 	
 	public static void main(String[] args) {
 		
-		CreateBinarySearchTree a = new CreateBinarySearchTree();
 		Node root = null;
 		//8, 3, 6, 10, 4, 7, 1, 14, 13
 		root = CreateBinarySearchTree.insert(root, 8);
