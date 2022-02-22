@@ -56,4 +56,28 @@ public class Graph_DFSApp {
 		}
 		return -1;
 	}
+	
+	public void mst() {
+		vertexList[0].wasVisited = true;
+		s.push(0);
+		
+		while(!s.isEmpty()) {
+			int current = s.peek();
+			int v = getAdjUnvisitedVertex(current);
+			
+			if(v == -1) {
+				s.pop();
+			} else {
+				vertexList[v].wasVisited = true;
+				displayVerticesMST(current);
+				displayVerticesMST(v);
+				System.out.print(" ");
+				s.push(v);
+			}
+		}
+	}
+	
+	public void displayVerticesMST(int v) {
+		System.out.print(vertexList[v].label);
+	}
 }
