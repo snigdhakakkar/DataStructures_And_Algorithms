@@ -39,8 +39,6 @@ public class GetDiameterOfABinaryTree {
 		
 		return diameter;
 		
-		
-		
 	}
 
 }
