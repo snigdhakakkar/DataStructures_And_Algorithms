@@ -2,7 +2,7 @@ package Graph;
 
 import java.util.Stack;
 
-public class Graph {
+public class Graph_DFSApp {
 	
 	private final int MAX_VERTS = 20;
 	private Vertex vertexList[];
@@ -10,7 +10,7 @@ public class Graph {
 	private int nVerts;
 	private Stack<Integer> s;
 	
-	public Graph() {
+	public Graph_DFSApp() {
 		vertexList = new Vertex[MAX_VERTS];
 		adjMat = new int[MAX_VERTS][MAX_VERTS];
 		nVerts = 0;
