@@ -22,7 +22,7 @@ public class PrintBoundaryNodesInABinaryTree {
 	
 	public static void printBoundaryNodes(Node node) {
 		if(node != null) {
-			System.out.print(node.data + " ");
+			System.out.print(node.data + " "); 
 			
 			printBoundaryLeft(node.left);
 			
