@@ -16,7 +16,7 @@ public class DepthFirstSearchUsingAdjacencyMatrix {
 	//time complexity for depth first search: O(V + E)
 	public static void main(String[] args) {
 		
-		Graph theGraph = new Graph();
+		Graph_DFSApp theGraph = new Graph_DFSApp();
 		theGraph.addVertex('A');
 		theGraph.addVertex('B');
 		theGraph.addVertex('C');
@@ -35,6 +35,8 @@ public class DepthFirstSearchUsingAdjacencyMatrix {
 		theGraph.dfs();
 		System.out.println();
 	}
+	
+	
 	
 	
 
