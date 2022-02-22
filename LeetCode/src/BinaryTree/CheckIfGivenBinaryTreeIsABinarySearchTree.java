@@ -1,6 +1,6 @@
 package BinaryTree;
 
-//Time complexity: O(N^2)
+//Time complexity: O(N), space complexity: O(1)
 public class CheckIfGivenBinaryTreeIsABinarySearchTree {
 	
 	public static void main(String[] args) {
