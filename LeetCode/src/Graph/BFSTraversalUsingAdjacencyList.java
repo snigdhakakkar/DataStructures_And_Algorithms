@@ -2,7 +2,7 @@ package Graph;
 
 public class BFSTraversalUsingAdjacencyList {
 	
-	//time complexity: O(V+E), Space complexity: O(V+E)
+	//time complexity: O(V+E), Space complexity: O(V)
 	public static void main(String[] args) {
 		int nodes = 6;
 		
