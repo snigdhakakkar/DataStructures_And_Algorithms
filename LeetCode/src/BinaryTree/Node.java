@@ -6,5 +6,6 @@ public class Node {
 	int height;
 	Node left;
 	Node right;
+	Node next;
 
 }
