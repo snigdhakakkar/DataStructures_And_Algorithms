@@ -73,5 +73,17 @@ public class Graph_dfsAdjList {
 		}
 		return true;
 	}
+	
+	//Another way to implement depth first search using recursion
+	public void dfsAnother(int start) {
+		visited[start] = true;
+		
+		List<Integer> neighborlist = Graph_dfsAdjList.get(start);
+		for(Integer neighbor : neighborlist) {
+			if(!visited[neighbor]) {
+				dfsAnother(neighbor);
+			}
+		}
+	}
 
 }
