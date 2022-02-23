@@ -1,6 +1,7 @@
 package Graph;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
 
@@ -8,6 +9,7 @@ public class Graph_dfsAdjList {
 	
 	List<List<Integer>> Graph_dfsAdjList;
 	boolean visited[];
+	int nodes;
 	
 	Graph_dfsAdjList(int nodes){
 		Graph_dfsAdjList = new ArrayList<>();
@@ -20,7 +22,7 @@ public class Graph_dfsAdjList {
 	
 	public void addEdge(int a, int b) {
 		Graph_dfsAdjList.get(a).add(b);
-		Graph_dfsAdjList.get(b).add(a); //if it is a directional graph, then this would get removed
+		//Graph_dfsAdjList.get(b).add(a); //if it is a directional graph, then this would get removed
 	}
 	
 	public void dfs(int start) {
@@ -54,6 +56,21 @@ public class Graph_dfsAdjList {
 			}
 		}
 		
+		return true;
+	}
+	
+	public boolean ifDirectedGraphStronglyConnected() {
+		
+		for(int i = 0; i < nodes; i++) {
+			dfs(i);
+			
+			for(int j = 0; j < nodes; j++) {
+				if(!visited[j]) {
+					return false;
+				}
+			}
+			Arrays.fill(visited, false);
+		}
 		return true;
 	}
 
