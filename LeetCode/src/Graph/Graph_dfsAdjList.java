@@ -99,5 +99,11 @@ public class Graph_dfsAdjList {
 		}
 		return numberOfConnectedComponent;
 	}
+	
+	public boolean ifSourceToDestinationIsReachable(int source, int destination) {
+		dfs(source);
+		
+		return visited[destination];
+	}
 
 }
