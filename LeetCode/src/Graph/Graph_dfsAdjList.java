@@ -43,5 +43,18 @@ public class Graph_dfsAdjList {
 			}
 		}
 	}
+	
+	public boolean ifGraphConnected() {
+		int startIndex = 0;
+		this.dfs(startIndex);
+		
+		for(int i = 0; i < visited.length; i++) {
+			if(!visited[i]) {
+				return false;
+			}
+		}
+		
+		return true;
+	}
 
 }
