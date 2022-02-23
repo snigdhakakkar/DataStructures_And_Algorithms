@@ -14,6 +14,7 @@ public class Graph_dfsAdjList {
 	Graph_dfsAdjList(int nodes){
 		Graph_dfsAdjList = new ArrayList<>();
 		visited = new boolean[nodes];
+		this.nodes = nodes;
 		
 		for(int i = 0; i < nodes; i++) {
 			Graph_dfsAdjList.add(i, new ArrayList<>());
@@ -22,7 +23,7 @@ public class Graph_dfsAdjList {
 	
 	public void addEdge(int a, int b) {
 		Graph_dfsAdjList.get(a).add(b);
-		//Graph_dfsAdjList.get(b).add(a); //if it is a directional graph, then this would get removed
+		Graph_dfsAdjList.get(b).add(a); //if it is a directional graph, then this would get removed
 	}
 	
 	public void dfs(int start) {
@@ -44,6 +45,7 @@ public class Graph_dfsAdjList {
 				}
 			}
 		}
+		System.out.println();
 	}
 	
 	public boolean ifGraphConnected() {
@@ -84,6 +86,18 @@ public class Graph_dfsAdjList {
 				dfsAnother(neighbor);
 			}
 		}
+	}
+	
+	public int numberOfConnectedComponent() {
+		int numberOfConnectedComponent = 0;
+		
+		for(int i = 0; i < nodes; i++) {
+			if(!visited[i]) {
+				dfs(i);
+				numberOfConnectedComponent++;
+			}
+		}
+		return numberOfConnectedComponent;
 	}
 
 }
