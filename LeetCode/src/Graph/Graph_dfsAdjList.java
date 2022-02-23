@@ -8,12 +8,13 @@ import java.util.Stack;
 public class Graph_dfsAdjList {
 	
 	List<List<Integer>> Graph_dfsAdjList;
-	boolean visited[];
+	boolean visited[], recursiveStack[];
 	int nodes;
 	
 	Graph_dfsAdjList(int nodes){
 		Graph_dfsAdjList = new ArrayList<>();
 		visited = new boolean[nodes];
+		recursiveStack = new boolean[nodes];
 		this.nodes = nodes;
 		
 		for(int i = 0; i < nodes; i++) {
@@ -23,7 +24,7 @@ public class Graph_dfsAdjList {
 	
 	public void addEdge(int a, int b) {
 		Graph_dfsAdjList.get(a).add(b);
-		Graph_dfsAdjList.get(b).add(a); //if it is a directional graph, then this would get removed
+		//Graph_dfsAdjList.get(b).add(a); //if it is a directional graph, then this would get removed
 	}
 	
 	public void dfs(int start) {
@@ -135,6 +136,41 @@ public class Graph_dfsAdjList {
 			}
 		}
 		
+		return false;
+		
+	}
+	
+	public boolean ifDirectedGraphHasCycle() {
+		
+		for(int i = 0; i < nodes; i++) {
+			if(dfs_ifCycleExists(i)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public boolean dfs_ifCycleExists(int index) {
+		if(recursiveStack[index]) {
+			return true;
+		}
+		
+		if(visited[index]) {
+			return false;
+		}
+		
+		visited[index] = true;
+		recursiveStack[index] = true;
+		
+		List<Integer> neighborlist = Graph_dfsAdjList.get(index);
+		
+		for(Integer neighbor : neighborlist) {
+			if(dfs_ifCycleExists(neighbor)) {
+				return true;
+			}
+		}
+		
+		recursiveStack[index] = false;
 		return false;
 		
 	}
