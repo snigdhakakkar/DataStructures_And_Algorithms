@@ -23,7 +23,7 @@ public class Graph_dfsAdjList {
 	
 	public void addEdge(int a, int b) {
 		Graph_dfsAdjList.get(a).add(b);
-		//Graph_dfsAdjList.get(b).add(a); //if it is a directional graph, then this would get removed
+		Graph_dfsAdjList.get(b).add(a); //if it is a directional graph, then this would get removed
 	}
 	
 	public void dfs(int start) {
@@ -110,6 +110,33 @@ public class Graph_dfsAdjList {
 		dfs(source);
 		
 		return visited[destination];
+	}
+	
+	public boolean ifUndirectedGraphHasCycle() {
+		for(int i = 0; i < nodes; i++) {
+			if(!visited[i]) {
+				if(dfs_withParent(i, -1)) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+	
+	public boolean dfs_withParent(int index, int parent) {
+		visited[index] = true;
+		
+		List<Integer> neighborlist = Graph_dfsAdjList.get(index);
+		for(Integer neighbor : neighborlist) {
+			if(!visited[neighbor]) {
+				dfs_withParent(neighbor, index);
+			} else if(neighbor != parent) {
+				return true;
+			}
+		}
+		
+		return false;
+		
 	}
 
 }
