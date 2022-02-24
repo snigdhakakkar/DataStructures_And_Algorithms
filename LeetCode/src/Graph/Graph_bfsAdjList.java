@@ -69,6 +69,7 @@ public class Graph_bfsAdjList {
 			int source = sourceQueue.remove();
 			
 			List<Integer> childrenList = Graph_bfsAdjList.get(source);
+			
 			for(Integer child : childrenList) {
 				incomingDegree.put(child, incomingDegree.get(child) - 1);
 				
@@ -78,6 +79,39 @@ public class Graph_bfsAdjList {
 			}
 		}
 		return nodes != visitedNodes;
+	}
+	
+	public List<Integer> topologicalSort() {
+		for(Map.Entry<Integer, Integer> entry : incomingDegree.entrySet()) {
+			if(entry.getValue() == 0) {
+				sourceQueue.add(entry.getKey());
+			}
+		}
+		
+		List<Integer> result = new ArrayList<>();
+		
+		while(!sourceQueue.isEmpty()) {
+			int source = sourceQueue.remove();
+			result.add(source);
+			
+			List<Integer> childrenList = Graph_bfsAdjList.get(source);
+			
+			for(Integer child : childrenList) {
+				incomingDegree.put(child, incomingDegree.get(child) - 1);
+				
+				if(incomingDegree.get(child) == 0) {
+					sourceQueue.add(child);
+				}
+			}
+		}
+		
+		if(result.size() != nodes) {
+			System.out.println("There is a cycle in the given graph.");
+			return new ArrayList<>();
+		}
+		
+		return result;
+		
 	}
 	
 	
