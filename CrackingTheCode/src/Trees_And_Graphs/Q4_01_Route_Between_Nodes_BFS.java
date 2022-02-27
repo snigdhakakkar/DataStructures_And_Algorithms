@@ -3,7 +3,7 @@ package Trees_And_Graphs;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-public class Q4_01_Route_Between_Nodes {
+public class Q4_01_Route_Between_Nodes_BFS {
 	
 	public static void main(String[] args) {
 		Graph g = new Graph();
@@ -21,7 +21,7 @@ public class Q4_01_Route_Between_Nodes {
 		
 		g.addNode(node1);
 		
-		System.out.println("Is Route exists : " + Q4_01_Route_Between_Nodes.search(g, node1, node5));
+		System.out.println("Is Route exists : " + Q4_01_Route_Between_Nodes_BFS.search(g, node1, node5));
 	}
 	
 	public static boolean search(Graph g, Node start, Node end) {
