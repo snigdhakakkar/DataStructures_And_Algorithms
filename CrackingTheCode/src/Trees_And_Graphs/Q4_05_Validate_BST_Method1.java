@@ -1,7 +1,7 @@
 package Trees_And_Graphs;
 
 public class Q4_05_Validate_BST_Method1 {
-	
+	//Time complexity: O(N), space complexity: O(1)
 	public static void main(String[] args) {
 		TreeNode root = new TreeNode(2);
 		root.left = new TreeNode(7);
