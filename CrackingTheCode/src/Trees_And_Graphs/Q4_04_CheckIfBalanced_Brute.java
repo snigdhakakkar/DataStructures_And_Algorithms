@@ -1,7 +1,7 @@
 package Trees_And_Graphs;
 
 public class Q4_04_CheckIfBalanced_Brute {
-	
+	//Time complexity: O(NlogN)
 	public static int getHeight(TreeNode root) {
 		if (root == null) {
 			//System.out.println("There are no nodes in the tree");
