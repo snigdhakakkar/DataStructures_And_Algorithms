@@ -3,7 +3,7 @@ package Trees_And_Graphs;
 public class Q4_10_Check_Subtree_Method2 {
 	
 	//time complexity: O(N + KM) where K is the number of occurrences of root node of t2 in t1 i.e. each time when matchTree is called
-	
+	//space complexity: O(logN + logM) for a balanced tree; O(N + M) for an unbalanced tree
 	public static boolean containsTree(TreeNode t1, TreeNode t2) {
 		if (t2 == null) {
 			return true; // The empty tree is a subtree of every tree.
