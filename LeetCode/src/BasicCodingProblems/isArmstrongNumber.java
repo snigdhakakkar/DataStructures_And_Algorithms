@@ -2,6 +2,9 @@ package BasicCodingProblems;
 
 public class isArmstrongNumber {
 	
+	//Armstrong number: each digit multiplied by itself n times where n is the number of digits in the number; sum is the number itself
+	// 153 = 1*1*1 + 5*5*5 + 3*3*3
+	
 	public static void main(String[] args) {
 		isArmstrongNumber a = new isArmstrongNumber();
 		System.out.println(a.checkIfArmstrong(123));
