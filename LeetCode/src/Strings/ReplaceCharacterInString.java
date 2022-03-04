@@ -2,7 +2,7 @@ package Strings;
 
 public class ReplaceCharacterInString {
 	
-public static void main(String[] args) {
+	public static void main(String[] args) {
 		
 		String s = "    Hello User!!  Welcome    Onboard     ";
 		
