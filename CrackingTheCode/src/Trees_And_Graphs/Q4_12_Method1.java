@@ -15,7 +15,7 @@ public class Q4_12_Method1 {
 		int pathsOnRight = countPathsWithSum(root.right, targetSum);
 		
 		return pathsFromRoot + pathsOnLeft + pathsOnRight;
-	}
+	}   
 	
 	/* Returns the number of paths with this sum starting from this node. */
 	public static int countPathsWithSumFromNode(TreeNode node, int targetSum, int currentSum) {
