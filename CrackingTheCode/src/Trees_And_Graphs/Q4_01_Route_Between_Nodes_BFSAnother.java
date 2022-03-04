@@ -15,7 +15,7 @@ public class Q4_01_Route_Between_Nodes_BFSAnother {
 		a.addEdge(3, 0);
 		a.addEdge(2, 4);
 				
-		System.out.println(a.ifSourceConnectedToDestination(0,4));
+		System.out.println(a.ifSourceConnectedToDestination(0,3));
 		}
 
 }
