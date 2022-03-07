@@ -24,7 +24,7 @@ public class isHappyNumber {
 	private int getNextValue(int val) {
 		int square = 0;
 		
-		while(val > 0) {      
+		while(val > 0) {          
 			int t = val % 10; //5 //2
 			square = square + t * t;
 			val = val / 10; //25/10 = 2
