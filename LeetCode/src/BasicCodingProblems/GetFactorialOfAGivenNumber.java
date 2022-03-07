@@ -9,7 +9,7 @@ public class GetFactorialOfAGivenNumber {
 		}
 		
 		return n * fact(n - 1);
-	}     
+	}        
 	
 	//without using recursion
 	public int factorial(int n) {
