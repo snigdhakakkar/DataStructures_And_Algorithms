@@ -7,7 +7,7 @@ public class isPalindrome {
 		System.out.println(a.checkIfPalindrome(12321));
 		System.out.println(a.checkIfPalindrome(123));
 	}
-	                   
+	                       
 	public boolean checkIfPalindrome(int n) {
 		int s = 0;
 		int t = n;
