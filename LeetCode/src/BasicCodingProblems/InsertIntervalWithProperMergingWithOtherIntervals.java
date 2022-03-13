@@ -7,7 +7,7 @@ import java.util.List;
 //time complexity: O(N) where N is the number of intervals; space complexity: O(N) as we are storing the intervals in an arraylist
 
 public class InsertIntervalWithProperMergingWithOtherIntervals {
-	                      
+	                         
 	public static void main(String[] args) {
 		
 		List<Interval> a = new ArrayList<Interval>();
