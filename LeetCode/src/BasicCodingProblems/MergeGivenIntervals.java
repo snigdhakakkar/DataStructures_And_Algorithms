@@ -13,7 +13,7 @@ import java.util.List;
 
 //if the intervals given are in random order, then we need to sort them first as per start value 
 //--> collections.sort based on start value
-        
+          
 public class MergeGivenIntervals {
 	//time complexity: O(N) where N is the number of intervals; space complexity: O(N) as we are storing the intervals in an arraylist
 	public static void main(String[] args) {
