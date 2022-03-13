@@ -8,6 +8,6 @@ public class Interval {
 	Interval(int x , int y){
 		this.start = x;
 		this.end = y;
-	}       
+	}          
 
 }
