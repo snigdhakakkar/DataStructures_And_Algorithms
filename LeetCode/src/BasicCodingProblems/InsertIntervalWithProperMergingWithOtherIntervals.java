@@ -12,7 +12,7 @@ public class InsertIntervalWithProperMergingWithOtherIntervals {
 		
 		List<Interval> a = new ArrayList<Interval>();
 		a.add(new Interval(1, 3));
-		a.add(new Interval(6, 8));
+		a.add(new Interval(6, 8));    
 		a.add(new Interval(9, 10));
 		a.add(new Interval(10, 12));
 		a.add(new Interval(14, 20));
