@@ -22,7 +22,7 @@ public class MergeGivenIntervals {
 		a.add(new Interval(1,4));
 		a.add(new Interval(2, 5));
 		a.add(new Interval(7,9));
-		
+		   
 		List<Interval> l = mergeIntervals(a);
 		for(Interval i : l) {
 		System.out.println("(" + i.start + " , " + i.end + ")");
