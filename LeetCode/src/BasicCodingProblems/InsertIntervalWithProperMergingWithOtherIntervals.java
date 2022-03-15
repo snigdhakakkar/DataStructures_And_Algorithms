@@ -26,7 +26,7 @@ public class InsertIntervalWithProperMergingWithOtherIntervals {
 	}
 	
 	public static List<Interval> mergeIntervals(List<Interval> list, Interval newInterval){
-		if(list.size() == 0) {
+		if(list.size() == 0) {   
 			List<Interval>  newList = new ArrayList<Interval>();
 			newList.add(newInterval);
 			return newList;
