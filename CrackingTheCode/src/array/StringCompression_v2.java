@@ -20,7 +20,7 @@ public class StringCompression_v2 {
 		
 		return compressed.length() < str.length() ? compressed.toString() : str;
 	}
-	
+	  
 	public static void main(String[] args) {
 		String str = "aabbbccwwwwqqqq";
 		System.out.println(str);
