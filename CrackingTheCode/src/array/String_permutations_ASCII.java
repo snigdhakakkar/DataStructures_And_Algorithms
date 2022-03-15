@@ -25,7 +25,7 @@ public class String_permutations_ASCII {
 					return false;
 				}
 			}
-			
+			   
 			return true; //letters has no negative values, and thus no positive values either
 		}
 		
