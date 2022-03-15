@@ -6,7 +6,7 @@ public class IsPalindromePermutation {
 		int[] table = buildCharFrequencyTable(phrase);
 		return checkMaxOneOdd(table);
 	}
-
+   
 	/*Check that no more than one character has an odd count*/
 	public static boolean checkMaxOneOdd(int[] table) {
 		boolean foundOdd = false;
