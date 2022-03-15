@@ -6,7 +6,7 @@ public class String_permutations_check {
 	//'God' is not a permutation of 'dog'
 	//'god    ' is not a permutation of 'dog'
 	
-	
+	   
 	public static String sort(String s) {
 		char[] content = s.toCharArray();
 		java.util.Arrays.sort(content);
