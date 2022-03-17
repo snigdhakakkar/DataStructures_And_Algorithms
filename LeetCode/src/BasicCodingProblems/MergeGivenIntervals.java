@@ -10,7 +10,7 @@ import java.util.List;
 //          4.....................10
 //                                    11............15
 //                                        12......14
-
+  
 //if the intervals given are in random order, then we need to sort them first as per start value 
 //--> collections.sort based on start value
                   
