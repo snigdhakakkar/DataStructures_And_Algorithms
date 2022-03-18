@@ -9,7 +9,7 @@ import java.util.List;
 public class InsertIntervalWithProperMergingWithOtherIntervals {
 	                                
 	public static void main(String[] args) {
-		  
+		    
 		List<Interval> a = new ArrayList<Interval>();
 		a.add(new Interval(1, 3));
 		a.add(new Interval(6, 8));    
