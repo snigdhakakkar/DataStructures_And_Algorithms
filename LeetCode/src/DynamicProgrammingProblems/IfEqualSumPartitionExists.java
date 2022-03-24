@@ -14,7 +14,7 @@ public class IfEqualSumPartitionExists {
 		
 		int[] arr = { 1, 2, 3, 5, 7};
 		
-		System.out.println(ifSubsetExistsWithEqualPartition(arr));
+		System.out.println(a.ifSubsetExistsWithEqualPartition(arr));
 		
 	}
 	
