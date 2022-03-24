@@ -7,7 +7,7 @@ package DynamicProgrammingProblems;
 
 //Conditions to apply DP:
 //Overlapping problems
-//Optimal substructure
+//Optimal substructure   
 
 //Time complexity using top-down DP: O(n)
 //Space complexity: O(n) as we have used an array
