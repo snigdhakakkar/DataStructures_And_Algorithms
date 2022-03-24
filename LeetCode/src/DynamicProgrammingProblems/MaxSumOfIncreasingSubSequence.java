@@ -15,7 +15,7 @@ public class MaxSumOfIncreasingSubSequence {
 		
 		System.out.println(a.getMaxSumOfIncreasingSubsequence(arr));
 	}
-	
+	  
 	public int getMaxSumOfIncreasingSubsequence(int[] arr) {
 		int[] mis = new int[arr.length];
 		
