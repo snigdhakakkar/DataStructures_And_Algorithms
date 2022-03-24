@@ -54,7 +54,7 @@ public class LongestPalindromeSequence {
 			} else {
 				arr[start][end] = Math.max(lpsTopDown(str, start + 1, end, arr), lpsTopDown(str, start, end - 1, arr));
 			}
-		}
+		}   
 		
 		return arr[start][end];
 	}
