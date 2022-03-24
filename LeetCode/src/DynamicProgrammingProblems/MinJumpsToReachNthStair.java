@@ -18,7 +18,7 @@ package DynamicProgrammingProblems;
 
 //Better approach: instead of array, use variables to store values
 
-
+  
 public class MinJumpsToReachNthStair {
 	
 	//recursive approach
