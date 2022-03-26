@@ -17,7 +17,7 @@ public class LongestPalindromeSequence {
 	}
 	//recursion
 	//time complexity: O(2^n)
-	//space complexity: O(n)
+	//space complexity: O(n)  
 	
 	public int lps(String str, int start, int end) {
 		if(start > end) {
