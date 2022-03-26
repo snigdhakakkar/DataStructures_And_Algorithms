@@ -34,6 +34,6 @@ public class MaxSumOfArrayElementsIfConsecutiveElementsNotAllowed {
 			dp[i] = Math.max(dp[i -1], arr[i] + dp[i -2]);
 		}
 		
-		return dp[arr.length - 1];
+		return dp[arr.length - 1];   
 	}
 }
