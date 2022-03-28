@@ -14,7 +14,7 @@ public class LongestPalindromeSequence {
 		System.out.println(a.lpsTopDown(str, 0, str.length() - 1, arr));
 		
 		System.out.println(a.lpsBottomUp(str, str.length()));
-	}
+	}  
 	//recursion
 	//time complexity: O(2^n)
 	//space complexity: O(n)  
