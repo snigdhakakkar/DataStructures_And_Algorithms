@@ -12,7 +12,7 @@ public class MaxSumOfArrayElementsIfConsecutiveElementsNotAllowed {
 		int[] arr = {4, 2, 3, 5, 1, 6, 7};
 		
 		System.out.println(a.maxSumIfConsecutiveElementsNotAllowed(arr));
-	}
+	}  
 	
 	public int maxSumIfConsecutiveElementsNotAllowed(int[] arr) {
 		
