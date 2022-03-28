@@ -15,7 +15,7 @@ public class LongestPalindromeSubstring {
 		System.out.println(a.lpsubstrTopDown(str, 0, str.length() - 1, arr));
 		
 		System.out.println(a.lpsubstrBottomUp(str, str.length()));
-	}
+	}   
 	
 	//recursion       
 	//time complexity: O(2^n)
