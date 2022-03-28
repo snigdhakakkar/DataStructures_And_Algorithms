@@ -13,7 +13,7 @@ public class LongestIncreasingSubsequenceLength {
 		int arr[] = {7, 1, 4, 8, 11, 2, 14, 3};
 		
 		System.out.println(a.lisLength(arr));
-	}
+	}  
 	
 	public int lisLength(int[] arr) {
 		int[] lis = new int[arr.length];
