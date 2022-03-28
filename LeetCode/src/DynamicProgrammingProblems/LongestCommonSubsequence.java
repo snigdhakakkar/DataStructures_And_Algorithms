@@ -1,7 +1,7 @@
 package DynamicProgrammingProblems;
 
 //s1 = abde
-//s2 = acbef
+//s2 = acbef   
 //longest common subsequence: abe
 
 public class LongestCommonSubsequence {
