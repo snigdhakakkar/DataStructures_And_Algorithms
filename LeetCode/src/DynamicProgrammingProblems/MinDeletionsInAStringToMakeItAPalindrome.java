@@ -22,7 +22,7 @@ public class MinDeletionsInAStringToMakeItAPalindrome {
 		if(str == null || str.length() == 0) {
 			return 0;
 		}
-		
+		  
 		return str.length() - lpsBottomUp(str, str.length());
 		
 	}
