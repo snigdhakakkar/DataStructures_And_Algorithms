@@ -5,7 +5,7 @@ public class MinDeletionsInAStringToMakeItAPalindrome {
 	public static void main(String[] args) {
 		
 		MinDeletionsInAStringToMakeItAPalindrome a = new MinDeletionsInAStringToMakeItAPalindrome();
-		
+	  	
 		String str = "abefbac";
 		
 		//longest palindromic subsequence in the string needs to be found
