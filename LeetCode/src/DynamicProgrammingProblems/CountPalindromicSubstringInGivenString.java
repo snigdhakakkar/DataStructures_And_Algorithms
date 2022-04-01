@@ -11,7 +11,7 @@ public class CountPalindromicSubstringInGivenString {
 		System.out.println(a.numberOfPalindromicSubstring(str, str.length()));
 		
 	}
-	         
+	           
 	public int numberOfPalindromicSubstring(String str, int l) {
 		
 		if(str == null || str.length() == 0) {
