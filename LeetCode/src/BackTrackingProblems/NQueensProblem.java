@@ -22,7 +22,17 @@ public class NQueensProblem {
 	}
 	
 	public boolean queenProblem() {
+		int[][] sol = new int[N][N];
 		
+		if(!queenProblemUtil(0, sol)) {
+			System.out.println("N Queen placement not possible");
+			return false;
+		}
+		
+		printQueenPlacement(sol);
+		return true;
 	}
+	
+	
 
 }
