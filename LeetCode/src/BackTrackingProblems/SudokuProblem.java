@@ -44,14 +44,20 @@ public class SudokuProblem {
 				}
 			}
 			if(!isEmpty) {
-				return true;
+				break;
 			}
+		}
+		
+		if(isEmpty) {
+			return true;
 		}
 		
 		for(int num = 1; num <= N; num++) {
 			if(isSafeToPlace(board, row, col, num)) {
+				
 				board[row][col] = num;
-				if(sudokuAutomation(board, n)) {
+				
+				if(sudokuAutomation(board, N)) {
 					return true;
 				} else {
 					board[row][col] = 0;
@@ -93,7 +99,13 @@ public class SudokuProblem {
 	}
 	
 	public void printSudokuBoard(int[][] board, int N) {
-		
+		for(int row = 0; row < N; row++) {
+			for(int col = 0; col < N; col++) {
+				System.out.print(board[row][col]);
+				System.out.print(" ");
+			}
+			System.out.println();
+		}
 	}
 
 }
