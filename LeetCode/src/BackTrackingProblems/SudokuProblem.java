@@ -28,6 +28,40 @@ public class SudokuProblem {
 	}
 	
 	public boolean sudokuAutomation(int[][] board, int N) {
+		int row = -1;
+		int col = -1;
+		
+		boolean isEmpty = true;
+		
+		for(int i = 0; i < N; i++) {
+			for(int j = 0; j < N; j++) {
+				if(board[i][j] == 0) {
+					row = i;
+					col = j;
+					
+					isEmpty = false;
+					break;
+				}
+			}
+			if(!isEmpty) {
+				return true;
+			}
+		}
+		
+		for(int num = 1; num <= N; num++) {
+			if(isSafeToPlace(board, row, col, num)) {
+				board[row][col] = num;
+				if(sudokuAutomation(board, n)) {
+					return true;
+				} else {
+					board[row][col] = 0;
+				}
+			}
+		}
+		return false;
+	}
+	
+	public boolean isSafeToPlace(int[][] board, int row, int col, int num) {
 		
 	}
 	
