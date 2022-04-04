@@ -57,7 +57,27 @@ public class NQueensProblem {
 	}
 	
 	private boolean isSafeToPlaceQueen(int row, int col, int[][] sol) {
+		int i, j;
 		
+		for(i = 0; i < col; i++) {
+			if(sol[row][i] == 1) {
+				return false;
+			}
+		}
+		
+		for(i = row, j = col; i >= 0 && j >= 0 ; i--, j--) {
+			if(sol[i][j] == 1) {
+				return false;
+			}
+		}
+		
+		for(i = row, j = col; i < N && j >= 0; i++, j--) {
+			if(sol[i][j] == 1) {
+				return false;
+			}
+		}
+		
+		return true;
 	}
 
 }
