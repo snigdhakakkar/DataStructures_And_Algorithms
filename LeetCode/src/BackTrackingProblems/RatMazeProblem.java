@@ -3,6 +3,8 @@ package BackTrackingProblems;
 //we need to tell whether rat is able to go to the end point or not
 //Rat can either go down-side or right side. He will first go down and then on the right side if he does not find path in downwards direction
 
+
+//Time complexity: O(N^2) as we are traversing through the entire matrix
 public class RatMazeProblem {
 	
 	public static void main(String[] args) {
