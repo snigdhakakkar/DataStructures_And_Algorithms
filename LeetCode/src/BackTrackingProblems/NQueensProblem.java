@@ -45,14 +45,15 @@ public class NQueensProblem {
 				sol[i][col] = 1;
 				
 				if(queenProblemUtil(col + 1, sol)) {
-					System.out.println(i + " " + col);
 					return true;
 				}
 				
+				sol[i][col] = 0;
+				
 			}
 			
-			return false;
 		}
+		return false;
 		
 	}
 	
