@@ -33,6 +33,31 @@ public class NQueensProblem {
 		return true;
 	}
 	
+	private boolean queenProblemUtil(int col, int[][] sol) {
+		
+		if(col >= N) {
+			return true;
+		}
+		
+		for(int i = 0; i < N; i++) {
+			
+			if(isSafeToPlaceQueen(i, col, sol)) {
+				sol[i][col] = 1;
+				
+				if(queenProblemUtil(col + 1, sol)) {
+					System.out.println(i + " " + col);
+					return true;
+				}
+				
+			}
+			
+			return false;
+		}
+		
+	}
 	
+	private boolean isSafeToPlaceQueen(int row, int col, int[][] sol) {
+		
+	}
 
 }
