@@ -62,6 +62,33 @@ public class SudokuProblem {
 	}
 	
 	public boolean isSafeToPlace(int[][] board, int row, int col, int num) {
+		//checking the row
+		for(int j = 0; j < board.length; j++) {
+			if(board[row][j] == num) {
+				return false;
+			}
+		}
+		
+		//checking the column
+		for(int i = 0; i < board.length; i++) {
+			if(board[i][col] == num) {
+				return false;
+			}
+		}
+		
+		//checking the box
+		int sqrt = (int) Math.sqrt(board.length);
+		int rowStart = row - row % sqrt;
+		int colStart = col - col % sqrt;
+		
+		for(int r = rowStart; r < rowStart + sqrt; r++) {
+			for(int d = colStart; d < colStart + sqrt; d++) {
+				if(board[r][d] == num) {
+					return false;
+				}
+			}
+		}
+		return true;
 		
 	}
 	
