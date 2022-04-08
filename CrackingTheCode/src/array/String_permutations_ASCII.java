@@ -25,7 +25,7 @@ public class String_permutations_ASCII {
 					return false;
 				}
 			}
-			   
+			      
 			return true; //letters has no negative values, and thus no positive values either
 		}
 		
@@ -39,5 +39,7 @@ public class String_permutations_ASCII {
 				System.out.println(word1 + ", " + word2 + ": " + anagram);
 			}
 		}
+		
+		//time complexity: O(N) 
 
 }
