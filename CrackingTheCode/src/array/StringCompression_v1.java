@@ -27,4 +27,6 @@ public class StringCompression_v1 {
 		System.out.println(compressBad(str));
 	}
 
+	//time complexity: O(p +k^2) where p is the length / size of original string and k is the number of character sequences
+	//it is slow because concatenation operation takes O(n^2)
 }
