@@ -55,4 +55,6 @@ public class IsPalindromePermutation {
 		String pali = "Rats live on no evil star";
 		System.out.println(isPermutationOfPalindrome(pali));
 	}
+	
+	//time complexity: O(N)
 }
