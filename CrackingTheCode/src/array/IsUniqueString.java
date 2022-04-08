@@ -1,11 +1,14 @@
 package array;
 
+import java.util.Arrays;
+
 public class IsUniqueString {
 	
+	//Approach 1:
 	public static boolean isUniqueChars(String str) {
-		if(str.length() > 128) { //Assuming that the string is an ASCII code and not a Unicode string
+		if(str.length() > 128) { //Assuming that the string is an ASCII code and not a UniCode string
 			return false;
-		}
+		}   
 		
 		boolean[] char_set = new boolean[128];
 		for (int i = 0; i < str.length(); i++) {
@@ -23,9 +26,41 @@ public class IsUniqueString {
 	
 	public static void main(String[] args) {
 		String[] words = {"abcde", "hello", "apple", "kite", "padle"};
+		//Approach 1
 		for(String word:words) {
 			System.out.println(word + ": " + isUniqueChars(word));
 		}
+		//Approach 2
+		for(String word:words) {
+			System.out.println(word + ": " + uniqueCharacters(word));
+		}
+	}
+	
+	//Approach 2:
+	public static boolean uniqueCharacters(String str) {
+		
+		char[] chArray = str.toCharArray();
+		/* Convert the string to character array
+	       for sorting */
+		
+		// Using sorting
+        // Arrays.sort() uses binarySort in the background
+        // for non-primitives which is of O(nlogn) time complexity
+        Arrays.sort(chArray);
+        
+        for (int i = 0; i < chArray.length - 1; i++) {
+            // if the adjacent elements are not
+            // equal, move to next element
+            if (chArray[i] != chArray[i + 1])
+                continue;
+ 
+            // if at any time, 2 adjacent elements
+            // become equal, return false
+            else
+                return false;
+        }
+        return true;
+        
 	}
 
 } //Time complexity for the code is O(n), where n is the string length. Space complexity is O(1).
