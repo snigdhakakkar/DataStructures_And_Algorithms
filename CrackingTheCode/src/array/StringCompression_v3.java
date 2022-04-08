@@ -49,4 +49,5 @@ public class StringCompression_v3 {
 		System.out.println(compress(str));
 	}
 
+	//time complexity: O(n + p)
 }
