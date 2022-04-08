@@ -34,4 +34,6 @@ public class String_permutations_check {
 			System.out.println(word1 + ", " + word2 + ": " + anagram);
 		}
 	}
+	
+	//time complexity depends upon the sorting algorithm used. Quicksort might take O(N^2) in worst case scenario and O(NlogN) usually if mergesort is used
 }
