@@ -12,7 +12,7 @@ public class URLify {
 				spaceCount++;
 			}
 		}
-		
+		    
 		index = truelength + spaceCount * 2;
 		
 		if (truelength < str.length) {
@@ -55,7 +55,7 @@ public class URLify {
 	}
 	
 	public static void main(String[] args) {
-		String str = "Mr. John Smith   ";
+		String str = "Mr John Smith ";
 		char[] arr = str.toCharArray();
 		int truelength = findLastCharacter(arr) + 1;
 		replaceSpaces(arr, truelength);
