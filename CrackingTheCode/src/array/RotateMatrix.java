@@ -66,5 +66,7 @@ public class RotateMatrix {
 		
 		
 	}
+	
+	//time complexity : O(N^2)
 
 }
