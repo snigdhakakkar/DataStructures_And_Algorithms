@@ -21,7 +21,7 @@ public class IsPalindromePermutation {
 		}
 		
 		return true;
-	}
+	}    
 	
 	/*Mapping each character to a number, for example a->0; b -> 1; c->2 etc.*/
 	/*Assumption: this is case insensitive. Non-letter characters map to -1 */
