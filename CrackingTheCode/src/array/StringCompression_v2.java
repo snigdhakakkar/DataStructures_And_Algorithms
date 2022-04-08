@@ -27,4 +27,5 @@ public class StringCompression_v2 {
 		System.out.println(compress(str));
 	}
 
+	//time complexity: O(n + p) where n is the length of the string and p is the number of character sequences
 }
