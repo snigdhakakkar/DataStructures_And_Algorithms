@@ -1,15 +1,17 @@
 package array;
 
+import java.util.Arrays;
+
 public class String_permutations_check {
 	
 	//Assumptions: permutation comparison is case sensitive and white space is significant in it
 	//'God' is not a permutation of 'dog'
 	//'god    ' is not a permutation of 'dog'
 	
-	   
+	       
 	public static String sort(String s) {
 		char[] content = s.toCharArray();
-		java.util.Arrays.sort(content);
+		Arrays.sort(content);
 		return new String(content);
 	}
 	
