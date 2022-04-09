@@ -17,7 +17,7 @@ public class StringCompression_v2 {
 				countConsecutive = 0;
 			}
 		}
-		
+		   
 		return compressed.length() < str.length() ? compressed.toString() : str;
 	}
 	  
