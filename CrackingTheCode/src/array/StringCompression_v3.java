@@ -22,7 +22,7 @@ public class StringCompression_v3 {
 				compressed.append(countConsecutive);
 				countConsecutive = 0;
 			}
-		}
+		}   
 		   
 		return compressed.toString();
 	}
