@@ -8,7 +8,6 @@ public class NQueensProblem {
 		this.N = N;
 	}
 	
-	
 	//we are given number N
 	//we have to place these N queens in NXN matrix
 	//First condition: single queen in one row
