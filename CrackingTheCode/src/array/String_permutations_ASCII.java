@@ -16,7 +16,7 @@ public class String_permutations_ASCII {
 			int[] letters = new int[128]; //Assuming that it is ASCII code
 			for (int i = 0; i < s.length(); i++) {
 				letters[s.charAt(i)]++;
-			}
+			}  
 			
 			for (int i = 0; i < t.length(); i++) {
 				letters[t.charAt(i)]--;
