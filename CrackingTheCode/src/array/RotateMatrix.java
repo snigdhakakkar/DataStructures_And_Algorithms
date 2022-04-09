@@ -27,7 +27,7 @@ public class RotateMatrix {
 				
 				//top --> right
 				matrix[j][n - i - 1] = top; //right <- saved top	
-				   
+				      
 			}
 		}
 		
