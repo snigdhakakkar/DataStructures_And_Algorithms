@@ -14,7 +14,7 @@ public class StringRotation {
 		
 		return false;
 	}
-	
+	   
 	public static boolean isSubstring(String big, String small) {
 		
 		if (big.indexOf(small) >= 0) {
