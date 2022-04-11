@@ -7,7 +7,7 @@ public class RotateMatrix {
 		if (matrix.length == 0 || matrix.length != matrix[0].length) {
 			return false;
 		}
-		
+		   
 		int n = matrix.length;
 		
 		for (int i = 0; i < n/2; i++) {
