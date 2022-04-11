@@ -9,7 +9,7 @@ public class HashEntry {
 	HashEntry(String key, String value){
 		this.key = key;
 		this.value = value;
-		this.next = null;  
+		this.next = null;    
 	}
 
 }
