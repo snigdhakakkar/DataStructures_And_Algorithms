@@ -3,7 +3,7 @@ package array;
 public class OneEditAway {
 	
 	public static boolean oneEdit(String first, String second) {
-		
+		   
 		if(first.length() == second.length()) {
 			return oneEditReplace(first, second);
 		} 
