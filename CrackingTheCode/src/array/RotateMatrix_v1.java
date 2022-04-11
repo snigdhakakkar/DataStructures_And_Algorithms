@@ -9,7 +9,7 @@ public class RotateMatrix_v1 {
 				{0,3,3,9},
 				{9,3,3,0}
 		};
-		
+		   
 		printMatrix(matrix);
 		
 		rotate(matrix);
