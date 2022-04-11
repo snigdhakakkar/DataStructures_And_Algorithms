@@ -10,7 +10,7 @@ public class HashTable {
 	}
 	
 	public void put(String key, String value) {
-		  
+		     
 		//Get the index
 		int index = getIndex(key);
 		
