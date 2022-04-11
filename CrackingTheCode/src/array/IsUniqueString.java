@@ -9,7 +9,7 @@ public class IsUniqueString {
 		if(str.length() > 128) { //Assuming that the string is an ASCII code and not a UniCode string
 			return false;
 		}   
-		
+		   
 		boolean[] char_set = new boolean[128];
 		for (int i = 0; i < str.length(); i++) {
 			int val = str.charAt(i);
