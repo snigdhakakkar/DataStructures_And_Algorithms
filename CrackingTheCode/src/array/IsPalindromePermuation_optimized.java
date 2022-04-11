@@ -17,7 +17,7 @@ public class IsPalindromePermuation_optimized {
 				} else {
 					countOdd--;
 				}
-				
+				   
 			}
 		}   
 		return (countOdd <=1);
