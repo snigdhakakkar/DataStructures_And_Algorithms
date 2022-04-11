@@ -11,7 +11,7 @@ public class OneEditAway_Optimized {
 		/*Get shorter and longer string*/
 		String s1 = first.length() < second.length() ? first : second;
 		String s2 = first.length() < second.length() ? second : first;
-		
+		   
 		int index1 = 0;
 		int index2 = 0;
 		
