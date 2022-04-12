@@ -43,4 +43,4 @@ public class Partition_Two_Pointers {
 		System.out.println(h.printForward());
 	}
 
-}
+}   
