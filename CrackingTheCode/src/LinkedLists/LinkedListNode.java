@@ -36,7 +36,7 @@ public class LinkedListNode {
 		if (p != null && p.next != this) {
 			p.setNext(this);
 		}
-	}
+	}     
 	
 	public String printForward() {
 		if(next != null) {
