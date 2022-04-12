@@ -30,7 +30,7 @@ public class RotateMatrix_v1 {
 			System.out.println();
 		}
 		
-	}
+	}    
 	
 	public static boolean rotate(int[][] matrix) {
 		
