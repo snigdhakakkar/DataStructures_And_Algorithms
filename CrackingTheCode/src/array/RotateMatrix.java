@@ -11,8 +11,8 @@ public class RotateMatrix {
 		int n = matrix.length;
 		
 		for (int i = 0; i < n/2; i++) {
-			
-			for (int j = i; i < n - 1 - j; j++) {
+			    
+			for (int j = i; j < n - 1 - i; j++) {
 				
 				int top = matrix[i][j]; //saving top
 				
