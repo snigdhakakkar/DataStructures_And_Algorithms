@@ -18,7 +18,7 @@ public class ZeroMatrix_v1 {
 				}
 			}
 		}
-		
+		     
 		//Nullify rows
 		
 		for (int i = 0; i < row.length; i++) {
