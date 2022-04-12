@@ -25,7 +25,7 @@ public class RemoveDups_withoutBuffer {
 			
 			current = current.next;
 		}
-	}
+	}    
 	
 	public static void main(String[] args) {	
 		LinkedListNode first = new LinkedListNode(0, null, null);
