@@ -40,7 +40,7 @@ public class Partition {
 					afterEnd = node;
 				}
 			}
-			
+			     
 			node = next;
 		}
 		
