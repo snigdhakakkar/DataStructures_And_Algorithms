@@ -22,7 +22,7 @@ public class RemoveDups {
 			n = n.next;
 		}
 	}
-	
+	    
 	public static void main(String[] args) {
 		LinkedListNode first = new LinkedListNode(0, null, null);
 		LinkedListNode head = first;
