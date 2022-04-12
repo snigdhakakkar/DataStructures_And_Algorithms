@@ -59,7 +59,7 @@ public class ZeroMatrix_v2 {
 	//Nullify first row
 		if (rowHasZero) {
 			nullifyRow(matrix,0);
-		}
+		}    
 		
 	//Nullify first column
 		if (columnHasZero) {
