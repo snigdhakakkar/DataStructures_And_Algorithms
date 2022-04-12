@@ -33,7 +33,7 @@ public class Delete_middle_node {
 			prev = next;
 		}
 		return root;
-	}
+	}    
 	
 	public static void main(String[] args) {
 		LinkedListNode head = randomLinkedList(10, 0, 10);
