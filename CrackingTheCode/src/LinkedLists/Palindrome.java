@@ -58,7 +58,7 @@ public class Palindrome {
 		//one.next = two;
 		//two.prev = one;
 		//two.next = three;
-		//three.prev = two;
+		//three.prev = two;   
 				
 		
 		LinkedListNode head = nodes[0];
