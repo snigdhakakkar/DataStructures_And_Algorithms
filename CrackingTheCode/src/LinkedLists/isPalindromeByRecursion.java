@@ -28,7 +28,7 @@ public class isPalindromeByRecursion {
 			int length = lengthOfList(head);
 			PalindromeResult sol = isPalindromeRecurse(head, length);
 			return sol.result;
-			
+			   
 		}
 		
 		public static PalindromeResult isPalindromeRecurse(LinkedListNode head, int length) {
