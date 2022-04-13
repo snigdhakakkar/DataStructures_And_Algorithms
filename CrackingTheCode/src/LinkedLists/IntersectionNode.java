@@ -16,7 +16,7 @@ public class IntersectionNode {
 		System.out.println(list1.printForward());
 		System.out.println(list2.printForward());
 		
-		
+		    
 		LinkedListNode intersection = findIntersection(list1, list2);
 		
 		System.out.println(intersection.printForward());
