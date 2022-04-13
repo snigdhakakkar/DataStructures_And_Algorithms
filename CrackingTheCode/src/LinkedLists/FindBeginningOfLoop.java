@@ -1,5 +1,5 @@
 package LinkedLists;
-
+    
 public class FindBeginningOfLoop {
 	
 	public static void main (String[] args) {
