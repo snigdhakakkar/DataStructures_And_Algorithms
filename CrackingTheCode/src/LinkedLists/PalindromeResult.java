@@ -1,7 +1,7 @@
 package LinkedLists;
 
 public class PalindromeResult {
-	
+	      
 	public LinkedListNode node;
 	public boolean result;
 	
