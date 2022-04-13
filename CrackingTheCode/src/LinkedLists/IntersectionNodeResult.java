@@ -8,5 +8,5 @@ public class IntersectionNodeResult {
 		this.tail = tail;
 		this.size = size;
 		}
-
+   
 }
