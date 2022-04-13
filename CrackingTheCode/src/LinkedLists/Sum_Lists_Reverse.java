@@ -62,7 +62,7 @@ public class Sum_Lists_Reverse {
 		System.out.println("= " + list3.printForward());
 		
 		int l1 = linkedListToInt(lA1);
-		int l2 = linkedListToInt(lB1);
+		int l2 = linkedListToInt(lB1);    
 		int l3 = linkedListToInt(list3);
 		
 		System.out.print(l1 + " + " + l2 + " = " + l3 + "\n");
