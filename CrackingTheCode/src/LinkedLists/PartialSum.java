@@ -3,6 +3,6 @@ package LinkedLists;
 public class PartialSum {
 	
 	public LinkedListNode sum = null;
-	public int carry = 0;
+	public int carry = 0;  
 
 }
