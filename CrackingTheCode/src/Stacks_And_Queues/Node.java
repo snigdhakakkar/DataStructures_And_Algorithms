@@ -6,7 +6,7 @@ public class Node {
 	public Node below;
 	public int value;
 	public Node(int value) {
-		this.value = value;
+		this.value = value;   
 	}
 
 }
