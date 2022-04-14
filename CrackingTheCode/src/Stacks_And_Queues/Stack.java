@@ -6,7 +6,7 @@ import Stacks_And_Queues.Node;
 
 @SuppressWarnings("unused")
 public class Stack {
-	
+	    
 	private int capacity;
 	public Node top;
 	public Node bottom;
