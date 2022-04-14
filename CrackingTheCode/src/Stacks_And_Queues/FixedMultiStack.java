@@ -96,7 +96,7 @@ public class FixedMultiStack {
 				sb.append(v + ", ");
 			}
 			return sb.toString();
-		}
+		}     
 		
 		public static void printStacks(FixedMultiStack stacks) {
 			System.out.println(arrayToString(stacks.getValues()));
