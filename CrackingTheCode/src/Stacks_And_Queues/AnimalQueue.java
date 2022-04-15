@@ -40,7 +40,7 @@ public class AnimalQueue {
 			return cats.peek();
 		} else if (cats.size() == 0) {
 			return dogs.peek();
-		}
+		}   
 		Dog dog = dogs.peek();
 		Cat cat = cats.peek();
 		if (dog.isOlderThan(cat)) {
