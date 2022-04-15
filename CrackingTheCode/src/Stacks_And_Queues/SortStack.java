@@ -4,6 +4,7 @@ import java.util.Stack;
 
 public class SortStack {
 	
+	//time complexity: O(N^2) and space complexity: O(N)
 	public static void sort(Stack<Integer> s) {
 		Stack<Integer> r = new Stack<Integer>();
 		
@@ -19,7 +20,7 @@ public class SortStack {
 		/* Copy the elements back. */
 		while (!r.isEmpty()) {
 			s.push(r.pop());
-		}
+		}        
 	}
 	
 	public static void main(String [] args) {
