@@ -17,7 +17,7 @@ public class MergeSortStack {
 		while(!r.isEmpty()) {
 			System.out.println(r.pop());
 		}
-	}
+	}     
 	
 	public static int randomIntInRange(int min, int max) {
 		return randomInt(max + 1 - min) + min;
