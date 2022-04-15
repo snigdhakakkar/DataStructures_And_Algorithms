@@ -11,7 +11,7 @@ public class SetOfStacks {
 	
 	public SetOfStacks(int capacity) {
 		this.capacity = capacity;
-	}
+	}      
 	
 	public Stack getLastStack() {
 		if (stacks.size() == 0) {
