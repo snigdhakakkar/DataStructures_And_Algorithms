@@ -12,7 +12,7 @@ public class AnimalShelter {
 		animals.enqueue(new Dog("Dexter"));
 		animals.enqueue(new Dog("Dobo"));
 		animals.enqueue(new Cat("Copa"));
-		
+		    
 		System.out.println(animals.dequeueAny().name());	
 		System.out.println(animals.dequeueAny().name());	
 		System.out.println(animals.dequeueAny().name());	
