@@ -11,7 +11,7 @@ public class MergeSortStack {
 			int r = randomIntInRange(0,  1000);
 			s.push(r);
 		}
-		
+		   
 		Stack<Integer> r = mergesort(s);
 		
 		while(!r.isEmpty()) {
