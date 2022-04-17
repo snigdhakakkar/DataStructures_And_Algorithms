@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 
 public class AnimalQueue {
-	
+	   
 	LinkedList<Dog> dogs = new LinkedList<Dog>();
 	LinkedList<Cat> cats = new LinkedList<Cat>();
 	
