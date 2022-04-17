@@ -8,7 +8,7 @@ public class FixedMultiStack {
 	private static int stackCapacity;
 	private static int[] values;
 	private static int[] sizes;
-	
+	    
 	public FixedMultiStack(int stackSize) {
 		stackCapacity = stackSize;
 		values = new int[stackSize * number_of_stacks];
