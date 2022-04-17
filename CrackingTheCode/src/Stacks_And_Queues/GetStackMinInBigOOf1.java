@@ -3,7 +3,7 @@ package Stacks_And_Queues;
 import java.util.Stack;
 
 public class GetStackMinInBigOOf1 {
-		
+		    
 		Stack<Integer> s1 = new Stack<>();
 		Stack<Integer> s2 = new Stack<>();
 		int min = Integer.MAX_VALUE;
