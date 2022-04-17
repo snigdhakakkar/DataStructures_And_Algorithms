@@ -15,7 +15,7 @@ public class Stack {
 	public Stack(int capacity) {
 		this.capacity = capacity;
 	}
-	
+	     
 	public boolean isFull() { 
 		return capacity == size; 
 	}
