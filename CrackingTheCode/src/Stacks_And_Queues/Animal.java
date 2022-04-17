@@ -7,7 +7,7 @@ public abstract class Animal {
 	public Animal(String n) {
 		name = n;
 	}     
-	    
+	        
 	public abstract String name();
 	
 	public void setOrder(int ord) {
