@@ -10,7 +10,7 @@ public class GetStackMinInBigOOf1 {
 		
 		public void pushElementInStack(int val) {
 			s1.push(val);
-			
+			    
 			if(s2.isEmpty()) {
 				s2.push(val);
 			} else {
