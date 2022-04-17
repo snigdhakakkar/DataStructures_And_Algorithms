@@ -11,7 +11,7 @@ public class QueueImplementationUsingStacks {
 		public void enqueue(int val) {
 			s1.push(val);
 		}
-		
+		   
 		//Time Complexity: O(N)
 		public int dequeue() {       
 			if(!s2.empty()) {
