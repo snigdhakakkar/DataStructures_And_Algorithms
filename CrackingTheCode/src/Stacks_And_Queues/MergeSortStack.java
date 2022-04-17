@@ -10,7 +10,7 @@ public class MergeSortStack {
 		for (int i = 0; i < 4; i++) {
 			int r = randomIntInRange(0,  1000);
 			s.push(r);
-		}
+		}    
 		   
 		Stack<Integer> r = mergesort(s);
 		
