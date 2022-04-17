@@ -8,5 +8,5 @@ public class NodeWithMin {
         this.value = v;
         this.min = min;
     }
-
+    
 }
