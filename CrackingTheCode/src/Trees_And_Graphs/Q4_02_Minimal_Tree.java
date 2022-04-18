@@ -9,7 +9,7 @@ public class Q4_02_Minimal_Tree {
 		 * In order to get a BST with minimal height, we need to ensure that the root node is almost in the middle of the array.
 		 * This means that the number of nodes in the left subtree is almost equal to the number of nodes
 		 * in the right subtree.
-		 * 
+		 *     
 		 * One bruteforce method is to traverse the tree each time adding a node and use insert node method - time complexity: O(NlogN)
 		 * 
 		 * Another method is to pass a subarray each time and pick the middle element to create the node
