@@ -29,7 +29,7 @@ public class Q4_03_List_of_Depths_BFS {
 					current.add(parent.right);
 				}
 			}
-			
+			    
 		}
 		
 		return result;
