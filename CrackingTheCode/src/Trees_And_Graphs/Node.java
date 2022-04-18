@@ -11,7 +11,7 @@ public class Node<T> {
 	
 	public Node(T data) {
 		this.data = data;
-	}
+	}    
 	
 	public Set<Node<T>> getAdjacent(){
 		return adjacent;
