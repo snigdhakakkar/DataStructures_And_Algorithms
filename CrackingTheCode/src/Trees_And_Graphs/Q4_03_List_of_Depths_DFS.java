@@ -22,7 +22,7 @@ public class Q4_03_List_of_Depths_DFS {
 				list = lists.get(level);
 				
 			}
-		
+		     
 		list.add(root);
 		
 		createLevelLinkedList(root.left, lists, level + 1);
