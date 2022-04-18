@@ -28,7 +28,7 @@ public class Q4_05_Validate_BST_Method1 {
 		inorder(node.left);
 		System.out.print(node.data + " ");
 		inorder(node.right);
-		
+		      
 	}
 
 	public static TreeNode prev = null;
