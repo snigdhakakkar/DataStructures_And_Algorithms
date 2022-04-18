@@ -46,7 +46,7 @@ public class Q4_06_Successor {
 		while (n.left != null) {
 			n = n.left;
 		}
-		
+		     
 		return n;
 	}
 
