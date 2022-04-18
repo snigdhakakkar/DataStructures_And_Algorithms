@@ -6,7 +6,7 @@ public class Q4_04_CheckIfBalanced_Brute {
 		if (root == null) {
 			//System.out.println("There are no nodes in the tree");
 			return -1;
-		}
+		}     
 		
 		return Math.max(getHeight(root.left), getHeight(root.right)) + 1;
 	}
