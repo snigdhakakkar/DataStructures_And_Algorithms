@@ -19,11 +19,11 @@ public class Graph_bfsAdjList {
 		for(int i = 0; i < nodes; i++) {
 			Graph_bfsAdjList.add(i, new ArrayList<>());
 		}
-	}
+	}   
 	
 	public void addEdge(int a, int b) {
 		Graph_bfsAdjList.get(a).add(b);
-		//Graph_dfsAdjList.get(b).add(a); //if it is a directional graph, then this would get removed
+		//Graph_bfsAdjList.get(b).add(a); //if it is a directional graph, then this would get removed
 	}
 	
 	public void bfs(int startIndex) {
