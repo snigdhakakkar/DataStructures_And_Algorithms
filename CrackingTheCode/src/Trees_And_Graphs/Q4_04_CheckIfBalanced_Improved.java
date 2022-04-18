@@ -25,7 +25,7 @@ public class Q4_04_CheckIfBalanced_Improved {
 		else {
 			return Math.max(leftHeight, rightHeight) + 1;
 		}
-	}
+	}     
 	
 	public static void main(String[] args) {
 		// Create balanced tree
