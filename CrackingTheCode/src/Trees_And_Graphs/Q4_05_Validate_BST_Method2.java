@@ -47,7 +47,7 @@ public class Q4_05_Validate_BST_Method2 {
 		if (!checkBST(n.left, min, n.data) ||
 				!checkBST(n.right, n.data, max)) {
 				return false;
-			}
+			}   
 		
 		return true;
 		
