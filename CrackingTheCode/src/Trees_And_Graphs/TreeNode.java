@@ -2,7 +2,7 @@ package Trees_And_Graphs;
 
 /* One node of a binary tree. The data element stored is a single 
  * character.
- */
+ */     
 
 public class TreeNode {
 	public int data;      
@@ -66,7 +66,7 @@ public class TreeNode {
 		
 		return true;
 	}
-	
+	   
 	public int height() {
 		int leftHeight = left != null ? left.height() : 0;
 		int rightHeight = right != null ? right.height() : 0;
