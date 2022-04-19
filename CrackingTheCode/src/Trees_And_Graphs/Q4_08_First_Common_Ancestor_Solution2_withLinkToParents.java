@@ -13,7 +13,7 @@ public class Q4_08_First_Common_Ancestor_Solution2_withLinkToParents {
 		}
 		
 		//traverse upwards until you find a node that covers q
-		TreeNode sibling = getSibling(p);
+		TreeNode sibling = getSibling(p);    
 		TreeNode parent = p.parent;
 		while (!covers(sibling, q)) {
 			sibling = getSibling(parent);
