@@ -21,7 +21,7 @@ public class Graph_Q7 {
 		Project start = getOrCreateNode(startName);
 		Project end = getOrCreateNode(endName);
 		start.addNeighbor(end);
-	}
+	}    
 	
 	public ArrayList<Project> getNodes() {
 		return nodes;
