@@ -35,7 +35,7 @@ public class Q4_08_First_Common_Ancestor_Optimized {
 	public static Result commonAncestorHelper(TreeNode root, TreeNode p, TreeNode q) {
 		if (root == null) {
 			return new Result(null, false);
-		}
+		}    
 		
 		if (root == p && root == q) {
 			return new Result(root, true);
