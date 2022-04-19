@@ -3,7 +3,7 @@ package Trees_And_Graphs;
 import java.util.ArrayList;
 
 public class Q4_07_Build_Order_Edge_Removal {
-	//TIME COMPLEXITY: O(P + D) where P is the number of projets and D is the number of dependencies
+	//TIME COMPLEXITY: O(P + D) where P is the number of projects and D is the number of dependencies
 	public static void main(String[] args) {
 		String[] projects = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j"};
 		String[][] dependencies = {
@@ -24,7 +24,7 @@ public class Q4_07_Build_Order_Edge_Removal {
 			System.out.println("Circular Dependency.");
 		} else {
 			for (String s : buildOrder) {
-				System.out.println(s);
+				System.out.print(s + " ");
 			}
 		}
 	}
