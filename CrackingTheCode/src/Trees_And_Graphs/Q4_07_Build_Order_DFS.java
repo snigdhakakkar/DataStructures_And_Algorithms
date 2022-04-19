@@ -24,7 +24,7 @@ public class Q4_07_Build_Order_DFS {
 			System.out.println("Circular Dependency.");
 		} else {
 			for (String s : buildOrder) {
-				System.out.println(s);
+				System.out.print(s + " ");
 			}
 		}
 	}
