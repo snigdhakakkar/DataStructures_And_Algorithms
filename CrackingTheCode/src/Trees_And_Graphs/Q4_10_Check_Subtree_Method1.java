@@ -7,7 +7,7 @@ public class Q4_10_Check_Subtree_Method1 {
 		StringBuilder string2 = new StringBuilder();
 		
 		getOrderString(t1, string1);
-		getOrderString(t2, string2);
+		getOrderString(t2, string2);    
 		
 		return string1.indexOf(string2.toString()) != -1;
 	}
