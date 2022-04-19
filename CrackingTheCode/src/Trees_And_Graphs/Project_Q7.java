@@ -22,7 +22,7 @@ public class Project_Q7 {
 		if (!map.containsKey(node.getName())) {
 			children.add(node);
 			map.put(node.getName(), node);
-		}
+		}     
 	}
 	
 	public ArrayList<Project_Q7> getChildren() {
