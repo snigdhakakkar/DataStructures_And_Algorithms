@@ -15,7 +15,7 @@ public class Project {
 
 	public String getName() {
 		return name;
-	}
+	}    
 	
 	public void addNeighbor(Project node) {
 		if (!map.containsKey(node.getName())) {
