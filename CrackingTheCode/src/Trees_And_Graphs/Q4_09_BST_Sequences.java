@@ -14,7 +14,7 @@ public class Q4_09_BST_Sequences {
 		ArrayList<LinkedList<Integer>> allSeq = allSequences(node);
 		for (LinkedList<Integer> list : allSeq) {
 			System.out.println(list);
-		}
+		}    
 		System.out.println(allSeq.size());
 	}
 	
