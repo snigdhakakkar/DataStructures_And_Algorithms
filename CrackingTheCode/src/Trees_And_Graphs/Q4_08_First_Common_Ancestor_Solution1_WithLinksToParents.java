@@ -1,7 +1,7 @@
 package Trees_And_Graphs;
 
 public class Q4_08_First_Common_Ancestor_Solution1_WithLinksToParents {
-	//time complexity: O(D) whereD is the depth of deeper tree
+	//time complexity: O(D) where D is the depth of deeper tree
 	public static TreeNode commonAncestor(TreeNode p, TreeNode q) {
 		int delta = depth(p) - depth(q); // get difference in depths
 		TreeNode first = delta > 0 ? q : p; // get shallower node
