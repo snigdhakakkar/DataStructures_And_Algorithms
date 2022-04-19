@@ -25,6 +25,6 @@ public class Graph_Q7_M2 {
 	
 	public ArrayList<Project_Q7> getNodes() {
 		return nodes;
-	}
+	}   
 
 }
