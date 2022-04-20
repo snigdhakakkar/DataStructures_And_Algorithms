@@ -22,7 +22,7 @@ public class Q4_12_Method1 {
 		if (node == null) {
 			return 0;
 		}
-		
+		    
 		currentSum += node.data;
 		
 		int totalPaths = 0;
