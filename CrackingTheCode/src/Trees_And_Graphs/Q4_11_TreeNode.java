@@ -6,6 +6,8 @@ import java.util.Random;
  * character.
  */
 
+//time complexity: O(logN) where N is the number of nodes
+
 public class Q4_11_TreeNode {
 	
 	public int data;      
