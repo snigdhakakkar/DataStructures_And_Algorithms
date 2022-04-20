@@ -11,7 +11,7 @@ public class Q4_11_Tree {
 			root = new Q4_11_TreeNode(value);
 		} else {
 			root.insertInOrder(value);
-		}
+		}    
 	}
 	
 	public int size() {
