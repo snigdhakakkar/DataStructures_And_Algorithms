@@ -1,7 +1,7 @@
 package Trees_And_Graphs;
 
 import java.util.HashMap;
-//time complexity: O(N), space complexity: O(logN) for a balanced tree
+//time complexity: O(N), space complexity: O(logN) for a balanced tree; space complexity: O(N) for an unbalanced tree
 public class Q4_12_Method2 {
 	
 	public static int countPathsWithSum(TreeNode root, int targetSum) {
