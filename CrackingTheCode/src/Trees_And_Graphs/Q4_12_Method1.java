@@ -25,7 +25,7 @@ public class Q4_12_Method1 {
 		    
 		currentSum += node.data;
 		
-		int totalPaths = 0;
+		int totalPaths = 0;    
 		
 		if (currentSum == targetSum) { // Found a path from the root
 			totalPaths++;
