@@ -11,7 +11,7 @@ public class Q4NextNumberApproach1 {
 			i = i >> 1;
 		}
 		return count;
-	}
+	}   
 	
 	public static int countZeros(int i) {
 		return 32 - countOnes(i);
