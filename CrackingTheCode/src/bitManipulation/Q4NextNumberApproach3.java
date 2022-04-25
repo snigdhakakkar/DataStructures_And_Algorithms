@@ -33,7 +33,7 @@ public class Q4NextNumberApproach3 {
 	}
 	
 	public static int getPrevArith(int n) {
-		int temp = n;
+		int temp = n;   
 		int c0 = 0;
 		int c1 = 0;
 		while (((temp & 1) == 1) && (temp != 0)) {
