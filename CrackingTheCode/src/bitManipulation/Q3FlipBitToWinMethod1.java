@@ -7,7 +7,7 @@ public class Q3FlipBitToWinMethod1 {
 	public static boolean getBit(int num, int i) {
 		return ((num & (1 << i)) != 0);
 	}	
-	
+	     
 	public static int longestSequence(int n) {
 		int maxSeq = 0;
 		
