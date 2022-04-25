@@ -50,7 +50,7 @@ public class Q4_11_TreeNode {
 			return right != null ? right.find(d) : null;
 		}
 		return null;
-	}
+	}    
 	
 	public Q4_11_TreeNode getRandomNode() {
 		int leftSize = left == null ? 0 : left.size();
