@@ -21,7 +21,7 @@ public class Q4NextNumberApproach2 {
 		int c1 = 0;
 		while (((c & 1) == 0) && (c != 0)) {
 			c0++;
-			c >>= 1;
+			c >>= 1;   
 		}
 		
 		while ((c & 1) == 1) {
