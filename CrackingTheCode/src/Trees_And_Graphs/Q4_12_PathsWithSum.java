@@ -4,7 +4,7 @@ public class Q4_12_PathsWithSum {
 	
 	public static void main(String[] args) {
 		boolean isWorking = true;
-		while (isWorking) {
+		while (isWorking) {   
 			int min = -20;
 			int max = 20;
 			int size = 20;
