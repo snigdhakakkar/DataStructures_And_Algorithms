@@ -1,7 +1,7 @@
 package bitManipulation;
 
 public class Q4NextNumberApproach1 {
-	
+	//bruteforce approach
 	public static int countOnes(int i) {
 		int count = 0;
 		while (i > 0) {
@@ -66,7 +66,7 @@ public class Q4NextNumberApproach1 {
 		i--;
 		while (countOnes(i) != num_ones) {
 			i--;
-		}
+		}    
 		return i;
 	}
 	
