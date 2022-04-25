@@ -16,7 +16,7 @@ public class Q4_12_Method2 {
 		runningSum += node.data;
 		
 		/* Count paths with sum ending at the current node. */     
-		/* Count paths with sum ending at the current node. */
+		/* Count paths with sum ending at the current node. */   
 		int sum = runningSum - targetSum;
 		
 		int totalPaths = pathCount.getOrDefault(sum, 0);
