@@ -1,4 +1,4 @@
-package bitManipulation;
+                                                                                                                                  package bitManipulation;
 
 public class Q1Insertion {
 	
@@ -26,7 +26,7 @@ public class Q1Insertion {
 		return n_cleared | m_shifted; 
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) {    
 		int a = ~23423;
 		System.out.println(toFullBinaryString(a));
 		int b = 5;
