@@ -18,7 +18,7 @@ public class Q6ConversionApproach2 {
 			a = a >> 1;
 		}
 		return s;
-	}
+	}      
 	
 	public static int bitSwapRequired(int a, int b){
 		int count = 0;
