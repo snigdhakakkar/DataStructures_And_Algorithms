@@ -14,7 +14,7 @@ public class Q8DrawLine {
 		if (end_offset != 7) {
 			last_full_byte--;
 		}
-		
+		       
 		// Set full bytes
 		for (int b = first_full_byte; b <= last_full_byte; b++) {
 			screen[(width / 8) * y + b] = (byte) 0xFF;
