@@ -11,7 +11,7 @@ public class Q6ConversionApproach1 {
 		}
 		return count;
 	}
-	
+	      
 	public static void main(String[] args) {
 		int a = -23432;
 		int b = 512132;
