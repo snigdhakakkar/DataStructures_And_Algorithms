@@ -6,7 +6,7 @@ public class Q2BinaryToString {
 	 * To print the decimal part, we can multiply by 2 and check if 2n is greater than or equal to 1. This is essentially shifting the fractional sum. 
 	 * r = 2(in decimal space) * n = 2(in decimal space) * (0.101 in binary space) = 1 * 1/ 2^0 + 0 * 1 / 2^1 + 1 * 1/2^2 = 1.01 in binary space
 	 * If r >= 1 , then we know that n had a 1 right after the decimal point. By doing this continuously we can check every digit.
-	*/
+	*/     
 	public static String printBinary(double num) {
 		if (num >= 1 || num <= 0) {
 			return "ERROR";
