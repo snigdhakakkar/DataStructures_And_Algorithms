@@ -20,7 +20,7 @@ public class Q4_11_Tree {
 	
 	public Q4_11_TreeNode getRandomNode() {
 		if (root == null) {
-			return null;
+			return null;    
 		}
 		
 		Random random = new Random();
