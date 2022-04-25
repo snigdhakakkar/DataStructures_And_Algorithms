@@ -14,7 +14,7 @@ public class Q4NextNumberApproach3 {
 		while ((c & 1) == 1) {
 			c1++;
 			c >>= 1;
-		}
+		}    
 		
 		/* If c is 0, then n is a sequence of 1s followed by a sequence of 0s. This is already the biggest
 		 * number with c1 ones. Return error.
