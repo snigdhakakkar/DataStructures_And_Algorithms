@@ -13,7 +13,7 @@ public class Q4NextNumberApproach2 {
 		int n1 = getNext(i);
 		binPrint(p1);
 		binPrint(n1);
-	}
+	}    
 	
 	public static int getNext(int n) {
 		int c = n;
