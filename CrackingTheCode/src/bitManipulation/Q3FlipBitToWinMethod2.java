@@ -9,7 +9,7 @@ public class Q3FlipBitToWinMethod2 {
 		ArrayList<Integer> sequences = getAlternatingSequences(n);
 		return findLongestSequence(sequences);
 	}	
-	
+	     
 	/* Return a list of the sizes of the sequences. The sequence starts 
 	 * off with the number of 0s (which might be 0) and then alternates
 	 * with the counts of each value.*/
