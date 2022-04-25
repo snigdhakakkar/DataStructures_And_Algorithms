@@ -62,7 +62,7 @@ public class Q8DrawLine {
 	}
 	
 	public static void main(String[] args) {
-		int width = 8 * 3;
+		int width = 8 * 3;    
 		int height = 3;
 					byte[] screen = new byte[width * height / 8];
 					drawLine(screen, width,2, 6, 1);
