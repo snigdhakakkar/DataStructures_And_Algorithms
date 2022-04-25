@@ -53,7 +53,7 @@ public class Q2BinaryToString {
 				num -= frac;
 			} else {
 				binary.append(0);
-			}
+			}   
 			frac /= 2;
 		}
 		return binary.toString();
