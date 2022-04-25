@@ -12,7 +12,7 @@ public class Q7Pairwise_swap {
 		int b = swapOddEvenBits(a);
 		System.out.println(b + ": " + toFullBinaryString(b));
 	}
-	
+	    
 	public static String toFullBinaryString(int a) {
 		String s = "";
 		for (int i = 0; i < 32; i++) {
