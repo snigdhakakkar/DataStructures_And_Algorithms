@@ -14,7 +14,7 @@ public class Q7Pairwise_swap {
 	}
 	    
 	public static String toFullBinaryString(int a) {
-		String s = "";
+		String s = "";    
 		for (int i = 0; i < 32; i++) {
 			Integer lsb = new Integer(a & 1);
 			s = lsb.toString() + s;
