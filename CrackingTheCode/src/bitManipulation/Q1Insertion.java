@@ -6,7 +6,7 @@ public class Q1Insertion {
 		// Validation
 		if (i > j || i < 0 || j >= 32) {
 			return 0; //base case
-		}
+		}    
 		
 		/* Create a mask to clear bits i through j in n
 		/* EXAMPLE: i = 2, j = 4. Result should be 11100011.
