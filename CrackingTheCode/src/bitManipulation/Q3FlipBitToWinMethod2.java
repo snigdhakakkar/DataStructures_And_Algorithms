@@ -60,7 +60,7 @@ public class Q3FlipBitToWinMethod2 {
 		int new_number = longestSequence(original_number);
 		
 		int number = 12;
-		int new_number1 = longestSequence(number);
+		int new_number1 = longestSequence(number);   
 			
 		System.out.println(Integer.toBinaryString(original_number));
 		System.out.println(new_number);		
