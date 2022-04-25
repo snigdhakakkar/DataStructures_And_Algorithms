@@ -20,7 +20,7 @@ public class Q3FlipBitToWinMethod3 {
 			maxLength = Math.max(previousLength + currentLength + 1, maxLength);
 			a >>>= 1;
 		}     
-		return maxLength;
+		return maxLength;   
 	}
 	
 	public static void main(String[] args) {
