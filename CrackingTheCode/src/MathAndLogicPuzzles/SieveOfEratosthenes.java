@@ -48,5 +48,14 @@ public class SieveOfEratosthenes {
 		return flags;
 	}
 	
+	public static void main(String[] args) {
+		boolean[] primes = sieveOfEratosthenes(10);
+		for (int i = 0; i < primes.length; i++) {
+			if (primes[i]) {
+				System.out.println(i);
+			}
+		}
+	}
+	
 
 }
