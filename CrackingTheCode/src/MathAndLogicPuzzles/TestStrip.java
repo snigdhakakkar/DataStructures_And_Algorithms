@@ -2,7 +2,7 @@ package MathAndLogicPuzzles;
 
 import java.util.ArrayList;
 
-public class TestStrip {
+public class TestStrip {    
 	
 	public static int DAYS_FOR_RESULT = 7; 
 	private ArrayList<ArrayList<Bottle>> dropsByDay = new ArrayList<ArrayList<Bottle>>();
