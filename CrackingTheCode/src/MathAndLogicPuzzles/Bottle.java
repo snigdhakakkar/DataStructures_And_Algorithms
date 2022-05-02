@@ -7,7 +7,7 @@ public class Bottle {
 	
 	public Bottle(int id) {
 		this.id = id;
-	}
+	}    
 	
 	public int getId() {
 		return id;
