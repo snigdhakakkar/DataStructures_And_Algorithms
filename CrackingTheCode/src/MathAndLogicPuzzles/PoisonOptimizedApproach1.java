@@ -74,7 +74,7 @@ public class PoisonOptimizedApproach1 {
 			testStrip.addDropOnDay(day, bottle);
 		}
 	}
-	
+	     
 	/* Get test strip index that should be used on this bottle on this day. */ 
 	public static int getTestStripIndexForDay(Bottle bottle, int day, int nTestStrips) {
 		int id = bottle.getId();
