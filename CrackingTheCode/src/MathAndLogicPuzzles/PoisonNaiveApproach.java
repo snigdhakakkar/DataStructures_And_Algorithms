@@ -67,7 +67,7 @@ public class PoisonNaiveApproach {
 	}
 	
 	public static void main(String[] args) {
-		int nBottles = 1000;
+		int nBottles = 1000;    
 		int nTestStrips = 10;
 		for (int poisoned = 0; poisoned < nBottles; poisoned++) {
 			ArrayList<Bottle> bottles = createBottles(nBottles, poisoned);
