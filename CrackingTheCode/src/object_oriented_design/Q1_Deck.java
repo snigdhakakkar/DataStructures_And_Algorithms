@@ -61,7 +61,7 @@ public class Q1_Deck<T extends Q1_Card> {
 	
 	public void print() {
 		for (Q1_Card card : cards) {
-			card.print();
+			card.print();   
 		}
 	}
 	
