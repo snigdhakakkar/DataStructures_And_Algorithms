@@ -23,5 +23,5 @@ public class Q1_Hand<T extends Q1_Card> {
 			card.print();
 		}
 	}	
-
+   
 }
