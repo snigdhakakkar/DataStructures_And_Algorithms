@@ -40,7 +40,7 @@ public abstract class Q1_Card {
 		switch (suit) {
 		case Club:
 			System.out.print("c");
-			break;
+			break;    
 		case Heart:
 			System.out.print("h");
 			break;
