@@ -18,7 +18,7 @@ public enum Q1_Suit {
 	
 	public static Q1_Suit getSuitFromValue(int value) {
 		switch (value) {
-		case 0:
+		case 0:     
 			return Q1_Suit.Club;
 		case 1:
 			return Q1_Suit.Diamond;
