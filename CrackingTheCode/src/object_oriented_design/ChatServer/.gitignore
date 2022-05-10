@@ -3,3 +3,9 @@
 /UserStatus.class
 /UserStatusType.class
 /Message.class
+/User.class
+/UserManager.class
+/Conversation.class
+/PrivateChat.class
+/GroupChat.class
+/System.class
