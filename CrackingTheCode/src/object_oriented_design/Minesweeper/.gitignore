@@ -2,3 +2,5 @@
 /Game.class
 /Board.class
 /UserPlay.class
+/UserPlayResult.class
+/Game$GameState.class
