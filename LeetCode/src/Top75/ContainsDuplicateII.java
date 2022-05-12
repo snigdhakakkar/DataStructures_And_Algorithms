@@ -22,7 +22,7 @@ public class ContainsDuplicateII {
 	 * Time complexity : O(nmin(k,n)). It costs O(min(k,n)) time for each linear search. Apparently we do at most 
 	 * n comparisons in one search even if k can be larger than n; Space complexity : O(1).
 	 */
-	 public boolean containsNearbyDuplicate(int[] nums, int k) {
+	 public boolean containsNearbyDuplicate1(int[] nums, int k) {
 	        for (int i = 0; i < nums.length; ++i) {
 	        for (int j = Math.max(i - k, 0); j < i; ++j) {
 	            if (nums[i] == nums[j]) return true;
@@ -43,7 +43,7 @@ public class ContainsDuplicateII {
 	  * Space complexity : O(min(n,k)). Space is the size of the sliding window which should not exceed n or k.
 	  */
 	 
-	 public boolean containsNearbyDuplicate(int[] nums, int k) {
+	 public boolean containsNearbyDuplicate2(int[] nums, int k) {
 	        Set<Integer> set = new TreeSet<>();
 	    for (int i = 0; i < nums.length; ++i) {
 	        if (set.contains(nums[i])) return true;
@@ -59,7 +59,7 @@ public class ContainsDuplicateII {
 	  * third approach - use hashmap
 	  */
 	 
-	 public boolean containsNearbyDuplicate(int[] nums, int k) {
+	 public boolean containsNearbyDuplicate3(int[] nums, int k) {
 		    Set<Integer> set = new HashSet<>();
 		    for (int i = 0; i < nums.length; ++i) {
 		        if (set.contains(nums[i])) return true;
