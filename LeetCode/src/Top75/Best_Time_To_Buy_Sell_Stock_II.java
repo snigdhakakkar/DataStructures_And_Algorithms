@@ -11,7 +11,7 @@ Find and return the maximum profit you can achieve.
 public class Best_Time_To_Buy_Sell_Stock_II {
 	
 	//approach 1
-	 public int maxProfit(int[] prices) {
+	 public int maxProfit1(int[] prices) {
 	        
 	        //time complexity: O(N); Space complexity: O(1);
 	        //Keep track of local max, local min, and next valley
