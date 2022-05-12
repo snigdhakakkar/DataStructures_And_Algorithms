@@ -32,7 +32,7 @@ public class Best_Time_To_Buy_And_Sell_Stock {
 	        
 	    }
 	    
-	    public int maxProfit(int[] prices) {
+	    public int maxProfit1(int[] prices) {
 	        
 	        /*to get the largest profit, we need to get the lowest buy point and the larger sell point
 	        Time complexity = O(N); space complexity: O(1);
