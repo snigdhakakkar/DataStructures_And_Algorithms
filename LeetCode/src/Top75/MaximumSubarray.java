@@ -93,7 +93,7 @@ public class MaximumSubarray {
         
         // The largest of the 3 is the answer for any given input array.
         return Math.max(bestCombinedSum, Math.max(leftHalf, rightHalf));
-    }
+    }   
     
 	
 	
