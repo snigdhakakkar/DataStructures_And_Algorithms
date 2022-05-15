@@ -18,7 +18,7 @@ public class TwoSumII {
         
         int low = 0;
         int high = numbers.length - 1;
-            
+               
         while (low < high){
             int sum = numbers[low] + numbers[high];
             
