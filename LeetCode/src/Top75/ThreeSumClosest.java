@@ -54,6 +54,46 @@ Space Complexity: from O(logn) to O(n), depending on the implementation of the s
 	        
 	    }
 	    
+	    /* In two pointer approach, we fix one number and use two pointers to enumerate pairs. Here, we fix two numbers, and use a binary search to find the third complement number. This is less efficient than the two pointers approach, however, it could be more intuitive to come up with.
+	    
+	      we may not find the exact complement number, so we check the difference between the complement and two numbers: the next higher and the previous lower.
+	    */
+	    public int threeSum1Closest(int[] nums, int target) {
+	        
+	        //Binary search Approach
+	        
+	        int diff = Integer.MAX_VALUE;
+	        
+	        int sz = nums.length;
+	        
+	        Arrays.sort(nums);
+	        
+	        for(int i = 0; i < sz && diff != 0; ++i) {
+	            for(int j = i + 1; j < sz - 1; ++j) {
+	                int complement = target - nums[i] - nums[j];
+	                var idx = Arrays.binarySearch(nums, j + 1, sz - 1, complement);
+	                int hi = idx >= 0 ? idx : ~idx, lo = hi - 1;
+	                if (hi < sz && Math.abs(complement - nums[hi]) < Math.abs(diff)){
+	                    diff = complement - nums[hi];
+	                }
+	                
+	                if(lo > j && Math.abs(complement - nums[lo]) < Math.abs(diff)){
+	                    diff = complement - nums[lo];
+	                }
+	            }
+	        }
+	        
+	        return target - diff;
+	        
+	    }
+	    
+	    /*
+	     * Time Complexity: O(n^2logn). Binary search takes O(logn), and we do it n times in the inner loop. 
+	     * Since we are going through n elements in the outer loop, the overall complexity is O(n^2logn).
+	     * 
+	     * Space Complexity: from O(logn) to O(n), depending on the implementation of the sorting algorithm.
+	     */
+	    
 	    
 	
 }
