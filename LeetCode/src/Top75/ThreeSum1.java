@@ -48,6 +48,10 @@ public class ThreeSum1 {
     //Sorting takes O(NlogN), so overall complexity: O(NlogN) + O(N^2) ~= O(N^2)
     //Space complexity:O(logN) to O(N) depending upon the sorting algorithm being used.
 	
-	   
+	   public static void main(String[] args){
+		   ThreeSum1 t = new ThreeSum1();
+		 int[]  arr = {2,3,5,6,7,8,-1,-3,-4};
+		   List<List<Integer>> a = t.threeSum(arr);
+	   }
 
 }
