@@ -26,7 +26,7 @@ public class ThreeSum3 {
                         Collections.sort(triplet);
                         res.add(triplet);
                     }
-                    seen.put(nums[j], i);
+                    seen.put(nums[j], i); //hashmap will take care of removing the duplicates
                 }
             }
             
