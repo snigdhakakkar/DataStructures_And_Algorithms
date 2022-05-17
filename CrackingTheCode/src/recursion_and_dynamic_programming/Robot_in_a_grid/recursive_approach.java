@@ -1,5 +1,13 @@
 package recursion_and_dynamic_programming.Robot_in_a_grid;
 
+/*
+ * At first, time complexity appears to be at most O(2^(r+c))
+ * But, we can find a tighter bound.
+ * imagine we labelled our paths with steps 1,2,3....n where n = r+ c
+ * our subset is formed when we pick r of those numbers to be our along-row moves.
+ * this reduces our runtime to O((r+c)!/r!c!)
+ * 
+ */
 import java.util.ArrayList;
 
 public class recursive_approach {
