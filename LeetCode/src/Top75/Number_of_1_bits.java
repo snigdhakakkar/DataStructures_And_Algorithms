@@ -38,5 +38,20 @@ public class Number_of_1_bits {
         
         return bits;
     }
+    
+    public int hammingWeightII(int n) {
+        
+        //Approach 2: Bit Manipulation trick
+            /* The key idea here is to realize that for any number n, doing a bit-wise AND of n and n−1 flips the least-significant 1-bit in n to 0. 
+            */
+            
+            int sum = 0;
+            while (n != 0) {
+                sum++;
+                n &= (n - 1);
+            }
+            return sum;
+        }
+        
 
 }
