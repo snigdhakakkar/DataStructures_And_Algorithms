@@ -23,6 +23,15 @@ Space complexity: O(1).
 j, we know there must be j−i pairs that satisfy the above condition with i's value fixed.
 	*/
 	
+	/*
+	 * Complexity analysis
+
+Time complexity: O(n^2logn). The binarySearch function takes O(logn) time, therefore the twoSumSmaller takes O(nlogn)
+time. The threeSumSmaller wraps with another for-loop, and therefore is O(n^2logn) time.
+
+Space complexity: O(1) because no additional data structures are used.
+	 */
+	
 	public int threeSumSmaller(int[] nums, int target) {
 		Arrays.sort(nums);
 		
