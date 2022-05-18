@@ -48,7 +48,7 @@ public class missing_number {
 	
 public int missingNumberI(int[] nums) {
         
-        /*time complexity: O(nlogn); space complexity: O(1) or O(n) 
+        /*time complexity: O(n); space complexity: O(n) 
         based on if we are sorting arrays inplace or not*/
         Set<Integer> numSet = new HashSet<Integer>();
         for (int num : nums) {
@@ -64,6 +64,19 @@ public int missingNumberI(int[] nums) {
         
         return -1;
     }
+
+public int missingNumberII(int[] nums) {
+    //Bit manipulation approach - harness the fact that XOR is its own inverse to find the missing element in linear time
+    /*time complexity: O(n); space complexity: O(1) 
+    based on if we are sorting arrays inplace or not*/
+    
+    int missing = nums.length;
+    for (int i = 0; i < nums.length; i++) {
+        missing ^= i ^ nums[i];
+    }
+    return missing;
+    
+}
 	
 	
 
