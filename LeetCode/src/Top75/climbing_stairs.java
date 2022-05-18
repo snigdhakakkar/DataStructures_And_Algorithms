@@ -60,7 +60,26 @@ public class climbing_stairs {
         return memo[i];
     }
     
-public int climbStairsII(int n) {
+    public int climbStairsII(int n) {
+        
+        //Approach 3 - dynamic programming approach
+        
+        //Time complexity : O(n); space complexity: O(n)
+        if (n == 1) {
+            return 1;
+        }
+        
+        int[] dp = new int[n + 1];
+        dp[1] = 1;
+        dp[2] = 2;
+        for (int i = 3; i <= n; i++){
+            dp[i] = dp[i - 1] + dp[i - 2];
+        }
+        
+        return dp[n];
+    }
+    
+    public int climbStairsIII(int n) {
         
         //Approach 4 - fibonacci number approach
         
