@@ -1,6 +1,8 @@
 package Top75;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 /*
  * Problem statement -  Given an array nums containing n distinct numbers 
@@ -42,6 +44,25 @@ public class missing_number {
         // Array was not missing any numbers
         return -1;
         
+    }
+	
+public int missingNumberI(int[] nums) {
+        
+        /*time complexity: O(nlogn); space complexity: O(1) or O(n) 
+        based on if we are sorting arrays inplace or not*/
+        Set<Integer> numSet = new HashSet<Integer>();
+        for (int num : nums) {
+            numSet.add(num);
+        }
+        
+        int expectedNumCount = nums.length + 1;
+        for (int number = 0; number < expectedNumCount; number++){
+            if (!numSet.contains(number)){
+                return number;
+            }
+        }
+        
+        return -1;
     }
 	
 	
