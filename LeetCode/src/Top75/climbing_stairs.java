@@ -59,5 +59,25 @@ public class climbing_stairs {
         memo[i] =  climb_StairsI(i + 1, n, memo) + climb_StairsI(i + 2, n, memo);
         return memo[i];
     }
+    
+public int climbStairsII(int n) {
+        
+        //Approach 4 - fibonacci number approach
+        
+        //Time complexity : O(n); space complexity: O(n)
+        if (n == 1) {
+            return 1;
+        }
+        
+        int first = 1;
+        int second = 2;
+        for (int i = 3; i <= n; i++){
+            int third = first + second;
+            first = second;
+            second = third;
+        }
+        
+        return second;
+    }
 
 }
