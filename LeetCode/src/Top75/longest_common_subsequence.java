@@ -130,7 +130,7 @@ public class longest_common_subsequence {
     }
     
     public int longestCommonSubsequenceII(String text1, String text2) {
-        //Approach 3 - dynamic programming
+        //Approach 3 - dynamic programming: time complexity - O(MN), Space complexity - O(MN)
        // Make a grid of 0's with text2.length() + 1 columns 
     // and text1.length() + 1 rows.
         int[][] dpGrid = new int[text1.length() + 1][text2.length() + 1];
