@@ -38,6 +38,7 @@ public class longest_common_subsequence {
     private String text2;
     public int longestCommonSubsequence(String text1, String text2) {
         //Approach 1 - memoization
+    	//time complexity: O(M.N^2) in worst case scenario; space complexity: O(M.N)
         // Make the memo big enough to hold the cases where the pointers go over the edges of the strings.
         this.memo = new int[text1.length() + 1][text2.length() + 1];
         
