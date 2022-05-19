@@ -37,5 +37,43 @@ public class coin_change {
         
         return minCount == Integer.MAX_VALUE ? -1 : minCount;
     }
+    
+    private Integer[] memo;
+    public int coinChangeI(int[] coins, int amount) {
+        //Approach 2: Recursion with memoization approach
+        //Space complexity: O(S) where S is the given amount; time complexity: O(S*N) where N is the number of denomination s
+        memo = new Integer[amount+ 1];
+        return recursionHelperI(coins, amount);
+    }
+    
+    private int recursionHelperI(int[] coins, int remain){
+        //base cases
+        if (remain < 0) {
+            return -1;
+        }
+        
+        if (remain == 0) {
+            return 0;
+        }
+        
+        if(memo[remain] != null) {
+            return memo[remain];
+        }
+        
+        int minCount = Integer.MAX_VALUE;
+        for (int coin : coins) {
+            int count = recursionHelperI(coins, remain - coin);
+            if (count == -1) {
+                continue;
+            }
+            minCount = Math.min(minCount, count + 1);
+        }
+        
+        memo[remain] = minCount == Integer.MAX_VALUE ? -1 : minCount;
+        
+        return memo[remain];
+    }
+    
+    
 
 }
