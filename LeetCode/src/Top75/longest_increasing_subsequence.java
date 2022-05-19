@@ -1,5 +1,6 @@
 package Top75;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /*
@@ -39,5 +40,41 @@ public class longest_increasing_subsequence {
         
         //time complexity: O(N^2); Space complexity: O(N)
     }
+    
+    /* Algorithm
+
+    Initialize an array sub which contains the first element of nums.
+
+    Iterate through the input, starting from the second element. For each element num:
+
+    If num is greater than any element in sub, then add num to sub.
+    Otherwise, iterate through sub and find the first element that is greater than or equal to num. Replace that element with num.
+    Return the length of sub.
+
+
+        /* 
+        */
+        public int lengthOfLISI(int[] nums) {
+            ArrayList<Integer> sub = new ArrayList<>();
+            sub.add(nums[0]);
+            
+            for (int i = 1; i < nums.length; i++) {
+                int num = nums[i];
+                if (num > sub.get(sub.size() - 1)){
+                     sub.add(num);
+                } else {
+                    // Find the first element in sub that is greater than or equal to num
+                    int j = 0;
+                        while (num > sub.get(j)){
+                            j += 1;
+                        }
+                        
+                        sub.set(j, num);
+                    }
+                }
+            
+            return sub.size();
+            //time complexity: O(N^2) only in the worst case.; Space complexity: O(N)
+        }
 
 }
