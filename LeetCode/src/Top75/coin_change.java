@@ -1,5 +1,7 @@
 package Top75;
 
+import java.util.Arrays;
+
 /*
  * Problem statement - You are given an integer array coins representing coins of different denominations 
  * and an integer amount representing a total amount of money.
@@ -74,6 +76,21 @@ public class coin_change {
         return memo[remain];
     }
     
-    
+    public int coinChangeII(int[] coins, int amount) {
+        //Approach 3: Dynamic Programming Bottom Up approach
+        //Space complexity: O(S) where S is the given amount; time complexity: O(S*N) where N is the number of denomination s
+        int[] dp = new int[amount + 1];
+        Arrays.fill(dp, amount + 1);
+        
+        dp[0] = 0; //base case
+        for(int i = 1; i <= amount; i++){
+            for(int coin: coins){
+                if(i - coin < 0) continue;
+                dp[i] = Math.min(dp[i], dp[i - coin] + 1) ;
+            }
+        }
+        
+        return dp[amount] == (amount + 1) ? -1 : dp[amount];
+    }
 
 }
