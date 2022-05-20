@@ -71,6 +71,29 @@ public class word_break_problem {
     
     //space complexity: O(n)
     
+    public boolean wordBreakIII(String s, List<String> wordDict) {
+        
+        //Approach 3: dynamic programming
+        Set<String> wordDictSet = new HashSet<>(wordDict);
+        boolean[] dp = new boolean[s.length() + 1];
+        dp[0] = true;
+        
+        for(int i = 1; i <= s.length(); i++){ //end pointer
+            for(int j = 0; j < i; j++){ //start pointer
+                if (dp[j]
+                   && wordDictSet.contains(s.substring(j,i))) {
+                    dp[i] = true;
+                    break;
+                }
+            } 
+        }
+        
+        return dp[s.length()];
+    }
     
+    
+    //time complexity: O(n^3); where n is the length of the string; size of the recursion tree can go up to n^2
+    
+    //space complexity: O(n)
 
 }
