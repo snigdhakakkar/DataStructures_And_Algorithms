@@ -11,7 +11,7 @@ import java.util.TreeSet;
  */
 
 public class ContainsDuplicateII {
-	
+	    
 	/*naive approach - linear search: This algorithm is the same as Approach #1 in Contains Duplicate solution, 
 	 * except that it looks at previous k elements instead of all its previous elements.
 
