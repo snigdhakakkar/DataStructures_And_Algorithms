@@ -9,7 +9,7 @@ Notice that you may not slant the container.
  */
 
 public class ContainerWithMostWater {
-	
+	    
 	//Non-optimal naive solution
 	/*
 	 * We have to maximize the Area that can be formed between the vertical lines using the shorter line 
