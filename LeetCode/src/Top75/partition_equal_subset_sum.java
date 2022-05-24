@@ -19,7 +19,7 @@ public class partition_equal_subset_sum {
 	        
 	        return recursion(nums, 0, sum/2);
 	        //recursively checking whether there exists a subset with target sum or not
-	    }
+	    }   
 	    
 	 private boolean recursion(int[] nums, int index, int sum) {
 	        //base cases
