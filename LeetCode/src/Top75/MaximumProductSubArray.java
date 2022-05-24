@@ -7,7 +7,7 @@ public class MaximumProductSubArray {
 		//time complexity: O(N^2); Space complexity: O(1)
 		
         if (nums.length == 0){
-            return 0;
+            return 0;   
         }
         
         int result = nums[0];
