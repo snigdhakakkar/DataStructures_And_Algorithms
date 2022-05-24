@@ -35,7 +35,7 @@ public class Number_of_1_bits {
             }
             mask <<= 1;
         }
-        
+           
         return bits;
     }
     
