@@ -15,3 +15,4 @@ public class Partition_array_minimize_difference_of_sums {
 	
 
 }
+   
