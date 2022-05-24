@@ -20,7 +20,7 @@ public class MaximumSubarray {
 	            for (int j = i; j < nums.length; j++) {
 	                currentSubarray += nums[j];
 	                maxSubarray = Math.max(maxSubarray, currentSubarray);
-	            }
+	            }   
 	        }
 	        
 	        return maxSubarray;
