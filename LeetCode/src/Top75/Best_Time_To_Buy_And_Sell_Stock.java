@@ -11,7 +11,7 @@ Return the maximum profit you can achieve from this transaction. If you cannot a
 public class Best_Time_To_Buy_And_Sell_Stock {
 	
 	    public int maxProfit(int[] prices) {
-	        
+	             
 	        /*Brute-force appraoch: calculate the difference on a certain day and store the largest different
 	        in a variable largest; time complexity- O(N^2); Space compexity - O(1);
 	        */
