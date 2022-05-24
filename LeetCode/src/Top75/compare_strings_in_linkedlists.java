@@ -32,7 +32,7 @@ public class compare_strings_in_linkedlists {
             }
             i1++;
             i2++;
-		}
+		}   
 		
 		return n1 == null && n2 == null;
 		
