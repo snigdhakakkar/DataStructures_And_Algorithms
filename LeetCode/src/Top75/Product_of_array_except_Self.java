@@ -16,7 +16,7 @@ public class Product_of_array_except_Self {
         //we can use prefix array and suffix array and then multiply each element from the two arrays to get the answer array
         
         //for follow up question, instead of using left and right array, we can make use of integer variable and answer array
-        
+           
         int length = nums.length;
         int[] answer = new int[length];
         
