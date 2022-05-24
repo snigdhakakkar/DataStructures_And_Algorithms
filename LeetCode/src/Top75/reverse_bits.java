@@ -32,7 +32,7 @@ public class reverse_bits {
         
         return ret;
     }
-    
+       
 //Byte by byte with memoization
     
     /* The algorithm is documented as "reverse the bits in a byte with 3 operations" on the online book called Bit Twiddling Hacks by Sean Eron Anderson, where one can find more details.
