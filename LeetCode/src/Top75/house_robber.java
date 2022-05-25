@@ -73,5 +73,33 @@ public class house_robber {
         
         return maxRobbedAmount[0];
     }
+    
+    public int robII(int[] nums) {
+    	//Optimized DP approach: time complexity: O(N) and space complexity: O(1)
+        
+        int N = nums.length;
+        
+        //special handling for empty array case
+        if (N == 0) {
+            return 0;
+        }
+        
+        int robNext, robNextPlusOne;
+        
+        //base cases
+        robNextPlusOne = 0;
+        robNext = nums[N-1];
+        
+        for(int i = N-2; i >= 0; --i){
+            
+            int current = Math.max(robNext, robNextPlusOne + nums[i]);
+            
+            // Update the variables
+            robNextPlusOne = robNext;
+            robNext = current;
+        }
+        
+        return robNext;
+    }
 
 }
