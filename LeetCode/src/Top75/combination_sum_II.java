@@ -1,6 +1,7 @@
 package Top75;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -16,9 +17,10 @@ Note: The solution set must not contain duplicate combinations.
  */
 
 public class combination_sum_II {
-	
+	//BACKTRACKING WITH COUNTER APPROACH
 	public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         // container to hold the final combinations
+		//time complexity: O(2^N); space complexity: O(N)
         List<List<Integer>> results = new ArrayList<>();
         LinkedList<Integer> comb = new LinkedList<>();
         
@@ -70,6 +72,45 @@ public class combination_sum_II {
             
             // backtrack the changes, so that we can try another candidate
             counter.set(nextCurr, new int[]{candidate, freq});
+            comb.removeLast();
+        }
+    }
+    
+    //BACKTRACKING WITH INDEX APPROACH
+    public List<List<Integer>> combinationSum2I(int[] candidates, int target) {
+        // container to hold the final combinations
+    	//time complexity: O(2^N); space complexity: O(N)
+        List<List<Integer>> results = new ArrayList<>();
+        LinkedList<Integer> comb = new LinkedList<>();
+        
+        Arrays.sort(candidates);
+        
+        backtrackI(candidates, comb, target, 0, results);
+        return results;
+    }
+    
+    private void backtrackI(int[] candidates, LinkedList<Integer> comb,
+                           Integer remain, Integer curr,
+                           List<List<Integer>> results){
+        if (remain == 0){
+            // copy the current combination to the final list.
+            results.add(new ArrayList<Integer>(comb));
+            return;
+        }
+        
+        for (int nextCurr = curr; nextCurr < candidates.length; ++nextCurr){
+            if (nextCurr > curr && candidates[nextCurr] == candidates[nextCurr - 1]){
+                continue;
+            }
+            
+            Integer pick = candidates[nextCurr];
+            // optimization: early stopping
+            if (remain - pick < 0){
+                break;
+            }
+            
+            comb.addLast(pick);
+            backtrackI(candidates, comb, remain - pick, nextCurr + 1, results);
             comb.removeLast();
         }
     }
