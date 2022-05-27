@@ -1,5 +1,7 @@
 package Top75;
 
+import java.util.HashMap;
+
 /*
  * Problem statement - The thief has found himself a new place for his thievery again. 
  * There is only one entrance to this area, called root.
@@ -26,12 +28,11 @@ can rob without alerting the police.
  */
 
 public class house_robberIII {
-	//recursion approacH
+	//recursion approach
 	//time complexity: O(N) as we visit all nodes once
 	//space complexity: O(N) as we need stacks for recursion; 
 	//max length of array is N and depth of tree logN; 
 	//thus best case scenario: O(logN) and worst case scenario: O(N)
-	
 	public int rob(TreeNode root) {
         
         int[] answer = helper(root);
@@ -55,6 +56,41 @@ public class house_robberIII {
         
         return new int[] {rob, notRob};
         
+    }
+    
+    //recursion with memoization approach
+    //time complexity: O(N) as we visit all nodes once
+  	//space complexity: O(N) as we use two hashmaps
+    HashMap<TreeNode, Integer> robResult = new HashMap<>();
+    HashMap<TreeNode, Integer> notRobResult = new HashMap<>();
+    
+    public int rob(TreeNode root) {
+        return helper(root, false);
+    }
+    
+    public int helper(TreeNode node, boolean parentRobbed) {
+        if (node == null) {
+            return 0;
+        }
+        
+        if (parentRobbed){
+            if (robResult.containsKey(node)){
+                return robResult.get(node);
+            }
+            
+            int result = helper(node.left, false) + helper(node.right, false);
+            robResult.put(node, result);
+            return result;
+        } else {
+            if (notRobResult.containsKey(node)) {
+                return notRobResult.get(node);
+            } 
+            int rob = node.val + helper(node.left, true) + helper(node.right, true);
+            int notRob = helper(node.left, false) + helper(node.right, false);
+            int result = Math.max(rob, notRob);
+            notRobResult.put(node, result);
+            return result;
+        }
     }
 	
 
