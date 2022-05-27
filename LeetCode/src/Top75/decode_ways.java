@@ -75,6 +75,8 @@ public class decode_ways {
 	    }
 	    
 	    //DP approach
+	    //time complexity: O(N) as We iterate the length of dp array which is N + 1
+	    //space complexity: O(N) - The length of the DP array.
 	    public int numDecodingsI(String s) {
 	        // DP array to store the subproblem results
 	        int[] dp = new int[s.length() + 1];
