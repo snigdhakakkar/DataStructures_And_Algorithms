@@ -72,7 +72,7 @@ public class house_robber {
             }
         
         return maxRobbedAmount[0];
-    }
+    }   
     
     public int robII(int[] nums) {
     	//Optimized DP approach: time complexity: O(N) and space complexity: O(1)
