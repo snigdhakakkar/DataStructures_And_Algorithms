@@ -57,7 +57,7 @@ public class house_robber {
         //special handling for empty array case
         if (N == 0) {
             return 0;
-        }
+        }     
         
         int[] maxRobbedAmount = new int[nums.length + 1];
         
