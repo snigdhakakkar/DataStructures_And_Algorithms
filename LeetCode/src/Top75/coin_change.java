@@ -17,7 +17,7 @@ public class coin_change {
         //Space complexity: O(S) where S is the given amount; time complexity: O(S^N) where N is the number of denomination s
         return recursionHelper(coins, amount);
     }
-          
+             
     private int recursionHelper(int[] coins, int remain){
         //base cases
         if (remain < 0) {
