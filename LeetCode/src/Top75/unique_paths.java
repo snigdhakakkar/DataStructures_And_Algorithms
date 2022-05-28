@@ -1,5 +1,7 @@
 package Top75;
 
+import java.util.Arrays;
+
 /*
  * Problem statement: There is a robot on an m x n grid. 
  * The robot is initially located at the top-left corner (i.e., grid[0][0]). 
@@ -23,6 +25,25 @@ public class unique_paths {
             return 1;
         }
         return uniquePaths(m - 1, n) + uniquePaths(m, n - 1);
+        
+    }
+	
+	//DP approach
+	//time complexity: O(NXM); space complexity: O(NXM)
+	public int uniquePathsI(int m, int n) {
+        int[][] d = new int[m][n];
+        
+        for(int[] arr : d){
+            Arrays.fill(arr, 1);
+        }
+        
+        for(int col = 1; col < m; ++col){
+            for(int row = 1; row < n; ++row) {
+                d[col][row] = d[col - 1][row] + d[col][row - 1];
+            }
+        }
+        
+         return d[m - 1][n - 1];
         
     }
 	
