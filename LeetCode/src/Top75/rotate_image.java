@@ -27,6 +27,8 @@ public class rotate_image {
     }
 	
 	//Approach 2: Reverse on Diagonal and then Reverse Left to Right
+	//time complexity: O(M)  where M is the number of cells in the matrix
+	//space complexity: O(1)
 	public void rotateI(int[][] matrix) {
         transpose(matrix);
        reflect(matrix);
