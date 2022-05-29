@@ -12,7 +12,7 @@ An input string is valid if:
 Open brackets must be closed by the same type of brackets.
 Open brackets must be closed in the correct order.
  */
-
+//time complexity: O(N) ; space complexity: O(N)
 public class valid_parantheses {
 	
 	 // Hash table that takes care of the mappings.
