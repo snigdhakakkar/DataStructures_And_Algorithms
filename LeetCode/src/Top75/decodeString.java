@@ -122,5 +122,10 @@ maxK[nmaxK[n]]
         }
         return currentString.toString();
     }
+	
+	/*time complexity: O(maxK.n) as We traverse a string of size n and iterate 
+	k times to decode each pattern of form k[string]; space complexity : O(m + n) 
+	where m is the number of letters (a-z) and n is the number of digits (0-9) in string s
+	*/
 
 }
