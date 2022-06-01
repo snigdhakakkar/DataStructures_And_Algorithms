@@ -17,5 +17,7 @@ public class first_bad_version extends VersionControl{
   }
   return left;
   }
+  
+  //time complexity: O(logN); space complexity: O(1)
 }
 
