@@ -25,7 +25,7 @@ public class climbing_stairs {
         if (i > n) {
             return 0;
         }
-        
+            
         if (i == n) {
             return 1;
         }
