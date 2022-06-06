@@ -71,7 +71,7 @@ public class vaildate_ip_address {
             if (Integer.parseInt(x) > 255){
                 return "Neither";
             }
-        }        
+        }           
         
         return "IPv4";
     }
