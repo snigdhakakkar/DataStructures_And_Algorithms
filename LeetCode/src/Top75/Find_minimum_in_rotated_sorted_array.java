@@ -21,7 +21,7 @@ public class Find_minimum_in_rotated_sorted_array {
         if(nums.length == 1){
             return nums[0];
         }
-               
+                  
         //initializing left and right pointers for implementing modified binary search
         int left = 0, right = nums.length - 1;
         

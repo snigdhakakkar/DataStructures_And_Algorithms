@@ -42,7 +42,7 @@ public class vaildate_ip_address {
     }
     
     //time complexity: O(1) and space complexity: O(1)
-    
+       
     //Approach 2: Divide and conquer approach
     
     public String validateIPv4(String IP){
@@ -71,7 +71,7 @@ public class vaildate_ip_address {
             if (Integer.parseInt(x) > 255){
                 return "Neither";
             }
-        }        
+        }           
         
         return "IPv4";
     }

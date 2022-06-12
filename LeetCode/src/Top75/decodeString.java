@@ -79,7 +79,7 @@ maxK[nmaxK[n]]
             }
             
         }
-              
+                  
         // get the result from stack
         char[] result = new char[stack.size()];
         for (int i = result.length - 1; i >= 0; i--){
