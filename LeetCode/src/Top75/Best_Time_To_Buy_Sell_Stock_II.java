@@ -34,7 +34,7 @@ public class Best_Time_To_Buy_Sell_Stock_II {
 	        total += peak - valley;
 	        
 	        return total;
-	        
+	                
 	    }
 	 
 	 //approach 2 - simpler approach
