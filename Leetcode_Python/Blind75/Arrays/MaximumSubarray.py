@@ -18,3 +18,15 @@ class Solution:
                 
         return max_subArray_sum
 
+    #time complexity: O(n^2), space complexity: O(1)
+
+## time complexity: O(n), space complexity: O(1)
+    def maxSubArrayI(self, nums: List[int]) -> int:
+        max_subArray_sum = current_subArray = nums[0]
+        
+        for num in nums[1:]:
+            current_subArray = max(current_subArray + num, num)
+            max_subArray_sum = max(max_subArray_sum, current_subArray)
+                
+        return max_subArray_sum
+    
