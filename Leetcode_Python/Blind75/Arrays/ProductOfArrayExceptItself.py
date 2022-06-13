@@ -36,3 +36,27 @@ class Solution:
 
 ##time complexity: O(N), space complexity: O(N) used up by the two intermediate arrays that we constructed to keep track of product of elements to the left and right. 
 
+
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        
+        #the length of the input array
+        length = len(nums)
+        
+        #left and right arrays of the ith value
+        answer = [0]*length
+        
+        answer[0] = 1
+        
+        for i in range(1, length):
+            answer[i] = nums[i - 1]*answer[i -1]
+            
+        #similarly, for right hand side product
+        R = 1
+        
+        for i in reversed(range(length)):
+            answer[i] = answer[i]*R
+            R *= nums[i]
+            
+        return answer
+
+##time complexity: O(N), space complexity: O(1)
