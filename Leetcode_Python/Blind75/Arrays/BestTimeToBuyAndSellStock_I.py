@@ -19,3 +19,16 @@ class Solution:
         return max_profit
 ##time complexity: O(n^2); space complexity: O(1)
 
+def maxProfitI(self, prices: List[int]) -> int:
+        min_price = float('inf')
+        max_profit = 0
+        
+        for i in range(len(prices)):
+            if prices[i] < min_price:
+                min_price = prices[i]
+            elif prices[i] - min_price > max_profit:
+                max_profit = prices[i] - min_price
+        
+        
+        return max_profit
+##time complexity: O(n); space complexity: O(1)
