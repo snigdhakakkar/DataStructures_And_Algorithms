@@ -29,3 +29,19 @@ if __name__ == "__main__":
 ##another approch
 num = 11
 print (bin(num).count("1"))
+
+##another approach
+def hammingWeightI(self, n: int) -> int:
+        
+        # base case
+        if (n == 0):
+            return 0
+        
+        else:
+            # if last bit set add 1 else
+            # add 0
+            count = 0
+            while(n):
+                count += n & 1
+                n >>= 1
+            return count
