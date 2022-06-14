@@ -46,3 +46,5 @@ def findMin(self, nums):
             # if nums[0] is greater than the mid value then this means the smallest value is somewhere to the left
             else:
                 right = mid - 1
+
+## time complexity: O(logN), Space complexity: O(1)
