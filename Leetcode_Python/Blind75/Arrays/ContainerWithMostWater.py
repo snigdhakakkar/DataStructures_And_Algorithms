@@ -19,4 +19,21 @@ class Solution:
                 maxarea = max(maxarea, min(height[left], height[right])*width)
                 
         return maxarea
+
+##Approach 2: 2 pointer method: time complexity:O(N)  space complexity: O(1)
+
+    def maxArea(self, height: List[int]) -> int:
+        maxarea = 0
+        left = 0
+        right = len(height) - 1
+        
+        while left < right:
+            width = right - left
+            maxarea = max(maxarea, min(height[left], height[right])*width)
+            if height[left] <= height[right]:
+                left += 1
+            else:
+                right -= 1
+                
+        return maxarea
                 
