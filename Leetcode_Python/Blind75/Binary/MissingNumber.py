@@ -25,3 +25,14 @@ class Solution:
             expected_num = nums[i - 1] + 1
             if nums[i] != expected_num:
                 return expected_num
+
+## Approach 2: Using hashSet
+## time complexity: O(n), space complexity: O(n)
+
+    def missingNumber(self, nums: List[int]) -> int:
+        numSet = set(nums)
+        
+        n = len(nums) + 1
+        for numbers in range(n):
+            if numbers not in numSet:
+                return numbers
