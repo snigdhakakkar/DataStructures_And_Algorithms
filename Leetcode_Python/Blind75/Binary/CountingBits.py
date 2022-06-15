@@ -52,6 +52,17 @@ class Solution:
             
         return ans
 
+    ## DP + Last set bit approach
+    ##time complexity: O(n) as we perform constant number of operations for each integer x, in the range 0 to n
+    ##space complexity: O(1)
+    
+    def countBits(self, n: int) -> List[int]:
+            
+        ans = [0] * (n+1)
+        for x in range(1, n+1):
+            ans[x] = ans[x & (x-1)] + 1
+            
+        return ans
 
 
     
