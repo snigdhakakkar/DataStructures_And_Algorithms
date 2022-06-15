@@ -4,6 +4,7 @@
 # For example, [3,6,2,7] is a subsequence of the array [0,3,1,6,2,2,7].
 
 ##DP Approach: time complexity: O(N^2), space complexity: O(N)
+from bisect import bisect_left
 from typing import List
 
 
@@ -32,4 +33,20 @@ def lengthOfLIS(self, nums: List[int]) -> int:
                     i += 1
                 sub[i] = num
                 
+        return len(sub)
+
+## Binary search approach:time complexity: O(NlogN), space complexity: O(N)
+def lengthOfLIS(self, nums: List[int]) -> int:
+        sub = []
+        for num in nums:
+            i = bisect_left(sub, num)
+            
+            # If num is greater than any element in sub
+            if i == len(sub):
+                sub.append(num)
+                
+            # Otherwise, replace the first element in sub greater than or equal to num
+            else:
+                sub[i] = num
+        
         return len(sub)
