@@ -18,4 +18,18 @@ def lengthOfLIS(self, nums: List[int]) -> int:
                     
         return max(dp)
 
-## Approach 2: 
+## Approach 2: Intelligently Build a Subsequence: time complexity - O(N^2), space complexity: O(N)
+def lengthOfLIS(self, nums: List[int]) -> int:
+        sub = [nums[0]]
+        
+        for num in nums[1:]:
+            if num > sub[-1]:
+                sub.append(num)
+                
+            else:
+                i = 0
+                while num > sub[i]:
+                    i += 1
+                sub[i] = num
+                
+        return len(sub)
