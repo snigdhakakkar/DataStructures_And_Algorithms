@@ -12,4 +12,37 @@ class Solution:
             return fib(n-1) + fib(n-2)
         
         return fib(n + 1)
+## memoization approach
+    def climbStairs(self, n: int) -> int:
+        
+        dp = [-1 for i in range(n + 1)]
+        def fib(n, dp):
+            
+            if (n <= 1):
+                return 1
+            
+            if (dp[n] != -1):
+                return dp[n]
+            
+            dp[n] = fib(n - 1, dp) + fib(n - 2, dp)
+            return dp[n]
+        fib(n, dp)
+        
+        return dp[n]
 
+## Another approach
+    def climbStairs(self, n: int) -> int:
+        
+        if n == 1 or n == 2:
+            return n
+        
+        prevPrev = 1
+        prev = 2
+        current = 0
+        
+        for i in range(3, n+1):
+            current = prev + prevPrev
+            prevPrev = prev
+            prev = current
+            
+        return current
