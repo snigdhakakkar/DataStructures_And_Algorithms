@@ -36,3 +36,11 @@ class Solution:
         for numbers in range(n):
             if numbers not in numSet:
                 return numbers
+
+##Approach 3: XOR the length of array with the index XOR value as XOR has a property of being its own inverse
+## time complexity: O(n), space complexity: O(1)
+    def missingNumber(self, nums: List[int]) -> int:
+        missing = len(nums)
+        for i, num in enumerate(nums):
+            missing ^= i ^ num
+        return missing
