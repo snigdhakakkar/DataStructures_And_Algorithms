@@ -50,3 +50,20 @@ def numUniqueEmails(self, emails: List[str]) -> int:
             
         return len(uniqueEmails)
 
+##Approach 2: Using split and Replace - time complexity: O(N.M), space complexity: O(N.M)
+def numUniqueEmails(self, emails: List[str]) -> int:
+        # Hash set to store all the unique emails.
+        uniqueEmails = set()
+        
+        for email in emails:
+            # Split into two parts: local and domain.
+            name, domain = email.split('@')
+            
+            #split local by '+' and replace all '.' with '',
+            local = name.split('+')[0].replace('.','')
+            
+            #concatenate local, '@', and domain
+            uniqueEmails.add(local + '@' + domain)
+            
+        return len(uniqueEmails)
+
