@@ -60,7 +60,7 @@ class Solution:
             visited.add(start)
         return False
 
-##DP Approach
+##DP Approach: time complexity: O(n^3), space complexity: O(n)
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
         word_set = set(wordDict)
         dp = [False]*(len(s) + 1)
