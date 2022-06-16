@@ -5,6 +5,7 @@
 ##Approach 1: Recursion and backtracking: time complexity - O(2^n) as for a string of length n, there are n+ 1 ways
 ##At each step we have two choices - to split or not to split
 ##space complexity: O(n) as the depth of recursion can go up to n 
+from collections import deque
 from functools import lru_cache
 from typing import FrozenSet, List, Set
 
@@ -37,3 +38,24 @@ class Solution:
             return False
         
         return wordBreakMemo(s, frozenset(wordDict), 0)
+
+##Approach 3: Breadth-first search: time complexity: O(n^3), space complexity: O(n)
+    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+        word_set = set(wordDict)
+        q = deque()
+        visited = set()
+        
+        q.append(0)
+        while q:
+            start = q.popleft()
+            
+            if start in visited:
+                continue
+            
+            for end in range(start + 1, len(s) + 1):
+                if s[start:end] in word_set:
+                    q.append(end)
+                    if end == len(s):
+                        return True
+            visited.add(start)
+        return False
