@@ -56,3 +56,27 @@ class Solution:
             
         return maxRobbedAmount[0]
 
+## Approach 3: DP with space optimization: time complexity: O(N), space complexity: O(1)
+
+def rob(self, nums: List[int]) -> int:
+        
+        #handling edge case: empty array
+        if not nums:
+            return 0
+        N = len(nums)
+        #base case initialization
+        rob_next_plus_one = 0 ##no house left for stealing
+        rob_next = nums[N - 1] ##only the last house left for stealing
+        
+        
+        #DP table calculations
+        for i in range(N-2, -1, -1):
+            
+            current = max(rob_next, rob_next_plus_one + nums[i])
+            
+            # Update the variables
+            rob_next_plus_one = rob_next
+            rob_next = current
+            
+        return rob_next
+
