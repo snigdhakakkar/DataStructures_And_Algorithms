@@ -39,5 +39,6 @@ def canJump(self, nums: List[int]) -> bool:
                 if canJumpFromPosition(nextPosition, nums):
                     return True
         
-            return False
+            return False    
         return canJumpFromPosition(0, nums)
+
