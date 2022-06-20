@@ -77,3 +77,26 @@ class SolutionI {
 
 Space complexity : O(n). This comes from the usage of the memo table
   */
+
+  //Greedy Approach
+  class SolutionII {
+    
+    public boolean canJump(int[] nums){
+        int lastPos = nums.length - 1;
+        for (int i = nums.length - 1; i >= 0; i--){
+            if (i + nums[i] >= lastPos) {
+                lastPos = i;
+            }
+        }
+        
+        return lastPos == 0;
+    }
+     
+ }
+
+ /*
+  * Time complexity : O(n). We are doing a single pass through the nums array, 
+  hence n steps, where n is the length of array nums.
+
+Space complexity : O(1). We are not using any extra memory.
+  */
