@@ -36,3 +36,10 @@ class Solution {
     }
 }
 
+/*
+ * Time complexity: O(n^2) as For every element i, we are looking at the next nums[i] elements 
+ * to its right aiming to find a GOOD index. nums[i] can be at most nn, where nn is the length of array nums.
+ * 
+ * Space complexity: O(2n) = O(n) . First n originates from recursion. 
+ * Second n comes from the usage of the memo table.
+ */
