@@ -69,3 +69,11 @@ class SolutionI {
     }
      
  }
+
+ /*
+  * Time complexity : O(n^2). For every element in the array, say i, we are looking at the next nums[i] 
+  elements to its right aiming to find a GOOD index. nums[i] can be at most n, where n is the 
+  length of array nums.
+
+Space complexity : O(n). This comes from the usage of the memo table
+  */
