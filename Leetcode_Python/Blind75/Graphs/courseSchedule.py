@@ -98,3 +98,51 @@ def isCyclic(self, currCourse, courseDict, checked, path):
         #   we complete the check of this node.
         checked[currCourse] = True
         return ret
+
+##Approach 3: Topological sort: time complexity - O(|E| + |V|) , space complexity: O(|E| + |V|)
+class GNode(object):
+    """  data structure represent a vertex in the graph."""
+    def __init__(self):
+        self.inDegrees = 0
+        self.outNodes = []
+
+class Solution:
+    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+        
+        from collections import defaultdict, deque
+        #key: index of the node; value: GNode
+        graph = defaultdict(GNode)
+        
+        totalDeps = 0 ##dependencies
+        for relation in prerequisites:
+            nextCourse, prevCourse = relation[0], relation[1]
+            graph[prevCourse].outNodes.append(nextCourse)
+            graph[nextCourse].inDegrees += 1
+            totalDeps += 1
+            
+        # we start from courses that have no prerequisites.
+        # we could use either set, stack or queue to keep track of courses with no dependencies.
+        nodepCourses = deque()
+        for index, node in graph.items():
+            if node.inDegrees == 0:
+                nodepCourses.append(index)
+                
+        removeEdges = 0
+        while nodepCourses:
+            ##pop out courses without dependency
+            course = nodepCourses.pop()
+            
+            #remove its outgoing edges one by one
+            for nextCourse in graph[course].outNodes:
+                graph[nextCourse].inDegrees -= 1
+                removeEdges += 1
+                # while removing edges, we might discover new courses with prerequisites removed, i.e. new courses without prerequisites.
+                if graph[nextCourse].inDegrees == 0:
+                    nodepCourses.append(nextCourse)
+                    
+        if removeEdges == totalDeps:
+            return True
+        else:
+            # if there are still some edges left, then there exist some cycles
+            # Due to the dead-lock (dependencies), we cannot remove the cyclic edges
+            return False
