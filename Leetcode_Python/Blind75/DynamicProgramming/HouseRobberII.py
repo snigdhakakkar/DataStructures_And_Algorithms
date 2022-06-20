@@ -6,7 +6,7 @@
 # Given an integer array nums representing the amount of money of each house, 
 # return the maximum amount of money you can rob tonight without alerting the police.
 
-##Approach 1: DP - time complexity: O(N), space complexity: O(1)
+##Approach 1: DP - time complexity: O(N), space complexity: O(1)  
 from typing import List
 
 
