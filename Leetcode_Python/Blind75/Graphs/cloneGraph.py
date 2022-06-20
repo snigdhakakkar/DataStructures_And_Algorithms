@@ -14,12 +14,18 @@
 # The given node will always be the first node with val = 1. 
 # You must return the copy of the given node as a reference to the cloned graph.}
 
-# Definition for a Node.
+#Definition for a Node.
 class Node:
     def __init__(self, val = 0, neighbors = None):
         self.val = val
         self.neighbors = neighbors if neighbors is not None else []
 
+# Approach 1 : Depth-first search:
+## Time Complexity: O(N + M), where N is a number of nodes (vertices) and M is a number of edges.
+## Space Complexity: O(N). This space is occupied by the visited hash map and in addition to that, 
+# space would also be occupied by the recursion stack since we are adopting a recursive approach here. 
+# The space occupied by the recursion stack would be equal to O(H) where H is the height of the graph. 
+# Overall, the space complexity would be O(N).
 
 class Solution:
     def __init__(self):
