@@ -12,12 +12,10 @@ import java.util.Queue;
 # INF as you may assume that the distance to a gate is less than 2147483647.
 # Fill each empty room with the distance to its nearest gate. If it is impossible to reach a gate, 
 # it should be filled with INF.
-
 Screenshot 2022-06-20 at 1.58.14 PM.png*/
 
 /*Approach 1: Time complexity : O(m^2n^2). For each point in the m×n size grid, 
 the gate could be at most m×n steps away.
-
 Space complexity : O(mn). The space complexity depends on the queue's size. 
 Since we won't insert points that have been visited before into the queue, 
 we insert at most m \times nm×n points into the queue.
