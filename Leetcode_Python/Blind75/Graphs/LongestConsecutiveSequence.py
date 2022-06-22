@@ -20,3 +20,26 @@ def longestConsecutive(self, nums: List[int]) -> int:
             longest_streak = max(longest_streak, current_streak)
             
         return longest_streak
+
+## Approach 2: sorting: time complexity - O(nlogn), space complexity - O(1) if sorted inpace; 
+# O(n) if sorted in additional space
+
+def longestConsecutive(self, nums: List[int]) -> int:
+        if not nums:
+            return 0
+        
+        nums.sort()
+        
+        longest_streak = 1
+        current_streak = 1
+        
+        for i in range(1, len(nums)):
+            if nums[i] != nums[i - 1]:
+                if nums[i] == nums[i - 1] + 1:
+                    current_streak += 1
+                else:
+                    longest_streak = max(longest_streak, current_streak)
+                    current_streak = 1
+                    
+        return max(longest_streak, current_streak)
+
