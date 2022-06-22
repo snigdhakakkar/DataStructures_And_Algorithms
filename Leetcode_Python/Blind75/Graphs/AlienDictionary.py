@@ -48,3 +48,40 @@ class Solution:
         
         #otherwise convert the ordering we got into a string and return it
         return "".join(output)
+
+    ##Approach 2: Topological sort / postorder DFS
+
+    def alienOrder(self, words: List[str]) -> str:
+        adj_list = {c:set() for word in words for c in word}
+        
+        for i in range(len(words) - 1):
+            w1, w2 = words[i], words[i + 1]
+            minLen = min(len(w1), len(w2))
+            if len(w1) > len(w2) and w1[:minLen] == w2[:minLen]:
+                return ""
+            
+            for j in range(minLen):
+                if w1[j] != w2[j]:
+                    adj_list[w1[j]].add(w2[j])
+                    break
+                    
+        visit = {} #False: visited, True: in current path
+        output = []
+        
+        def dfs(c):
+            if c in visit:
+                return visit[c]
+            
+            visit[c] = True
+            for neighbor in adj_list[c]:
+                if dfs(neighbor):
+                    return True
+            visit[c] = False
+            output.append(c)
+        
+        for c in adj_list:
+            if dfs(c):
+                return ""
+            
+        output.reverse()
+        return "".join(output)
