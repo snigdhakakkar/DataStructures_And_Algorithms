@@ -1,5 +1,5 @@
 ##Recursive DFS approach - time complexity: O(N + M), space complexity - O(N + M)
-from typing import List
+from typing import Collection, List
 
 
 def validTree(self, n: int, edges: List[List[int]]) -> bool:
@@ -49,5 +49,30 @@ def validTree(self, n: int, edges: List[List[int]]) -> bool:
                 return False
             parent[neighbour] = node
             stack.append(neighbour)
+    
+    return len(parent) == n
+
+###Iterative BFS
+def validTree(self, n: int, edges: List[List[int]]) -> bool:
+    
+    if len(edges) != n - 1: return False
+    
+    adj_list = [[] for _ in range(n)]
+    for A, B in edges:
+        adj_list[A].append(B)
+        adj_list[B].append(A)
+    
+    parent = {0: -1}
+    queue = Collection.deque([0])
+    
+    while queue:
+        node = queue.popleft()
+        for neighbour in adj_list[node]:
+            if neighbour == parent[node]:
+                continue
+            if neighbour in parent:
+                return False
+            parent[neighbour] = node
+            queue.append(neighbour)
     
     return len(parent) == n  
