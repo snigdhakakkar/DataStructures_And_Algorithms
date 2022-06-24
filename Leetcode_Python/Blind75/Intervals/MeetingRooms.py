@@ -23,3 +23,4 @@ def canAttendMeetings(self, intervals: List[List[int]]) -> bool:
             if intervals[i][1] > intervals[i + 1][0]:
                 return False
         return True
+
