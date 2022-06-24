@@ -17,3 +17,12 @@ class Solution:
             curr = tmp
         
         return prev
+##Approach 2: recursive: time complexity - O(N), space complexity - O(N)
+    def reverseListI(self, head: ListNode) -> ListNode:
+        if (not head) or (not head.next):
+            return head
+        
+        p = self.reverseList(head.next)
+        head.next.next = head
+        head.next = None
+        return p
