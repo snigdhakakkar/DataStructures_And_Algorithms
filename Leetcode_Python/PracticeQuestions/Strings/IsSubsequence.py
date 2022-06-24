@@ -5,6 +5,10 @@
 
 ##Approach 1: Divide and conquer with greedy - time complexity: O(T), space complexity: O(T) where T is 
 #the length of the target string
+import bisect
+from collections import defaultdict
+
+
 def isSubsequence(self, s: str, t: str) -> bool:
         LEFT_BOUND, RIGHT_BOUND = len(s), len(t) ##defining the end limits for both the strings
 
@@ -37,3 +41,30 @@ def isSubsequence(self, s: str, t: str) -> bool:
             p_right += 1 ##increment the right pointer (target string)
             
         return p_left == LEFT_BOUND ##if the source string has been found completely or not
+
+##Follow up question: If there are lots of incoming S, say S_1, ..., and you want to check 
+# one by one to see if T has its subsequence. In this scenario, how would you change your code?
+
+##Approach : Greedy match with character indices hashmap
+## time complexity: O(T + SlogT), space complexity: O(T)
+def isSubsequence(self, s: str, t: str) -> bool:
+        
+        letter_indices_table = defaultdict(list)
+        for index, letter in enumerate(t):
+            letter_indices_table[letter].append(index)
+            
+        curr_match_index = -1
+        for letter in s:
+            if letter not in letter_indices_table: 
+                return False #no match at all, early exit
+            
+            ##greedy match with binary search
+            indices_list = letter_indices_table[letter]
+            match_index = bisect.bisect_right(indices_list, curr_match_index)
+            if match_index != len(indices_list):
+                curr_match_index = indices_list[match_index]
+            else:
+                return False #no suitable match found, early exit
+            
+        return True
+
