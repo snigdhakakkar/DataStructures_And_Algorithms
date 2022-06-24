@@ -24,4 +24,16 @@ def isSubsequence(self, s: str, t: str) -> bool:
 
         return rec_isSubsequence(0, 0) ##starting with 0th index for both source and target
 
-##Approach 2
+##Approach 2: Two pointer approach: time complexity: O(T), space complexity: O(1)
+
+def isSubsequence(self, s: str, t: str) -> bool:
+        LEFT_BOUND, RIGHT_BOUND = len(s), len(t) ##defining the end limits for both the strings
+
+        p_left = p_right = 0 ##INITIALIZE THE TWO POINTERS
+        while p_left < LEFT_BOUND and p_right < RIGHT_BOUND: ##while the strings have not been exhausted
+            ##move both the pointers or just the right pointer
+            if s[p_left] == t[p_right]:
+                p_left += 1 ##increment the left pointer (source string)
+            p_right += 1 ##increment the right pointer (target string)
+            
+        return p_left == LEFT_BOUND ##if the source string has been found completely or not
