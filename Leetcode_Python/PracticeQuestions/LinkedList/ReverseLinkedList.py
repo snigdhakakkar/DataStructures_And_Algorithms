@@ -15,7 +15,7 @@ class Solution:
             curr.next = prev
             prev = curr
             curr = tmp
-        
+            
         return prev
 ##Approach 2: recursive: time complexity - O(N), space complexity - O(N)
     def reverseListI(self, head: ListNode) -> ListNode:
