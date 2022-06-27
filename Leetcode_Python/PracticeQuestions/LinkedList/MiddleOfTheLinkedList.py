@@ -15,3 +15,12 @@ class Solution:
             arr.append(arr[-1].next)
         return arr[len(arr) // 2]
 
+##Approach 2: Two-pointer approach - time complexity: O(N), space complexity - O(1)
+class Solution:
+    def middleNode(self, head: ListNode) -> ListNode:
+        slow = fast = head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        return slow
+
