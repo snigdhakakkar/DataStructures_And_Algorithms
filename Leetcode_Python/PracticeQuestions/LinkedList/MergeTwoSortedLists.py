@@ -8,7 +8,7 @@ class ListNode:
           self.val = val
           self.next = next
 ##Approach 1: Recursion - time complexity: O(M + N), space complexity: O(M + N)
-class Solution:
+class Solution:    
     def mergeTwoLists(self, l1, l2):
         if not l1:
             return l2
