@@ -25,4 +25,37 @@ class SolutionI:
                 
         return None
 
-
+##Approach 2: Floyd's Tortoise and hare approach - O(N), space complexity - O(1)
+class SolutionII:
+    def detectCycle(self, head: ListNode) -> ListNode:
+        if head is None:
+            return None
+        
+        # if there is a cycle, the fast/slow pointers will intersect at some node. otherwise, there is no cycle, so we canot find an entrance to the cycle
+        intersect = self.getIntersect(head)
+        if intersect is None:
+            return None
+        
+        ##to find the entrance to the cycle, we have two pointers, which traverse at the same speed -- one from the front of the list, and the other from the point of intersection
+        ptr1 = head
+        ptr2 = intersect
+        while ptr1 != ptr2:
+            ptr1 = ptr1.next
+            ptr2 = ptr2.next
+        
+        return ptr1
+    
+    def getIntersect(self, head):
+        tortoise = head
+        hare = head
+        
+        #a fast pointer will either loop around a cycle and meet the slow pointer or reach the null at the end of the non-cyclic list
+        
+        while hare is not None and hare.next is not None:
+            tortoise = tortoise.next
+            hare = hare.next.next
+            if tortoise == hare:
+                return tortoise
+            
+        return None
+        
