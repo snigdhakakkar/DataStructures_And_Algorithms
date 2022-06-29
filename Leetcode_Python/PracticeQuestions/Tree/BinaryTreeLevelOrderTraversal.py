@@ -2,6 +2,8 @@
 # (i.e., from left to right, level by level).
 
 # Definition for a binary tree node.
+from collections import deque
+import collections
 from typing import List
 ## Approach 1: Recursion - time complexity - O(N), space complexity - O(N)
 
@@ -63,4 +65,25 @@ class Solution:
             level += 1
             
         return levels
+
+##Approach 3: Using BFS
+class Solution:
+    def levelOrder(self, root: TreeNode) -> List[List[int]]:
+        res = []
+        
+        q = collections.deque()
+        q.append(root)
+        
+        while q:
+            qLen = len(q)
+            level = []
+            for i in range(qLen):
+                node = q.popleft()
+                if node:
+                    level.append(node.val)
+                    q.append(node.left)
+                    q.append(node.right)
+            if level:        
+                res.append(level)
+        return res
         
