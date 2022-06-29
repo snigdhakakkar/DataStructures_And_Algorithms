@@ -33,4 +33,34 @@ class Solution:
         helper(root, 0)
         return levels
 
-##Approach 2: Iteration - 
+##Approach 2: Iteration - time complexity - O(N), space complexity - O(N)
+class Solution:
+    def levelOrder(self, root: TreeNode) -> List[List[int]]:
+        levels = []
+        if not root:
+            return levels
+        
+        level = 0
+        queue = deque([root, ])
+        while queue:
+            ##start at the current level
+            levels.append([])
+            level_length = len(queue)
+            
+            for i in range(level_length):
+                node = queue.popleft()
+                ##fulfill the current level
+                levels[level].append(node.val)
+                
+                ##add child nodes of the current level in the queue for the next level
+                if node.left:
+                    queue.append(node.left)
+                    
+                if node.right:
+                    queue.append(node.right)
+                    
+            ##go to the next level
+            level += 1
+            
+        return levels
+        
