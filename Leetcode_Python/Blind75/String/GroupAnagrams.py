@@ -15,3 +15,19 @@ def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
             
         return ans.values()
 
+##using count array to avoid sorting the anagrams - time complexity: O(N.m) where m is the length
+# of strs and N is the avergae length of each string, space complexity: O(mN)
+
+def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        result = collections.defaultdict(list) #mapping the charCount to the list of the anagrams
+        
+        for s in strs:
+            count = [0]*26 #a,b,c....z
+            
+            for c in s:
+                count[ord(c) - ord("a")] += 1
+            
+            result[tuple(count)].append(s)
+            
+        return result.values()
+
