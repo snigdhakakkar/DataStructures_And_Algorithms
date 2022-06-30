@@ -27,3 +27,7 @@ class Solution:
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         return Counter(s) == Counter(t)
+
+##Approach 3: using sorting
+    def isAnagramI(self, s: str, t: str) -> bool:
+        return sorted(s) == sorted(t)
