@@ -3,6 +3,9 @@
 # phrase, typically using all the original letters exactly once.
 
 ##using hashmaps - time complexity: O(s + t), space complexity: O(s + t)
+from collections import Counter
+
+
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         if len(s) != len(t):
@@ -19,3 +22,8 @@ class Solution:
                 return False
             
         return True
+
+##Approach 2: using counter feature in python
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        return Counter(s) == Counter(t)
