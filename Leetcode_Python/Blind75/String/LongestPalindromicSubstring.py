@@ -8,7 +8,7 @@ class Solution:
         
         for i in range(len(s)):
             ##odd length palidnromes
-            l, r = i, i
+            l, r = i, i   
             while l>= 0 and r< len(s) and s[l] == s[r]:
                 if (r -l + 1) > resLen:
                     resLen = r - l + 1
