@@ -6,7 +6,7 @@ class Solution:
         res = ""
         resLen = 0
         
-        for i in range(len(s)):
+        for i in range(len(s)):    
             ##odd length palidnromes
             l, r = i, i        
             while l>= 0 and r< len(s) and s[l] == s[r]:
