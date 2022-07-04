@@ -53,7 +53,7 @@ class Solution:
             
         return True
 
-##Recursive Inorder Traversal
+##Recursive Inorder Traversal- time complexity: O(N), space complexity: O(N)
 class Solution:
     def isValidBST(self, root: TreeNode) -> bool:
         
@@ -72,3 +72,21 @@ class Solution:
         
         self.prev = -math.inf
         return inOrder(root)
+
+##Approach 4: Iterative inorder traversal - time complexity: O(N), space complexity: O(N)
+class Solution:
+    def isValidBST(self, root: TreeNode) -> bool:
+        
+        stack, prev = [], -math.inf
+        
+        while stack or root:
+            while root:
+                stack.append(root)
+                root = root.left
+            root = stack.pop()
+            if root.val <= prev:
+                return False
+            prev = root.val
+            root = root.right
+            
+        return True
