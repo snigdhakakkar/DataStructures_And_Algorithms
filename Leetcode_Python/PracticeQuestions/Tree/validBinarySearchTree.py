@@ -52,3 +52,23 @@ class Solution:
             stack.append((root.left, lower, val))
             
         return True
+
+##Recursive Inorder Traversal
+class Solution:
+    def isValidBST(self, root: TreeNode) -> bool:
+        
+        def inOrder(root):
+            if not root:
+                return True
+            
+            if not inOrder(root.left):
+                return False
+            
+            if root.val <= self.prev:
+                return False
+            
+            self.prev = root.val
+            return inOrder(root.right)
+        
+        self.prev = -math.inf
+        return inOrder(root)
