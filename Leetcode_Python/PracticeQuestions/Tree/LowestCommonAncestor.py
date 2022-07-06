@@ -21,3 +21,17 @@ class Solution:
                 curr = curr.left
             else:
                 return curr
+
+##Approach 2: Recursive approach - time complexity: O(N), Space complexity: O(N)
+class Solution:
+    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        curr = root
+        
+        while curr:
+            if p.val > curr.val and q.val > curr.val:
+                return self.lowestCommonAncestor(curr.right, p, q)
+            elif p.val < curr.val and q.val < curr.val:
+                return self.lowestCommonAncestor(curr.left, p, q)
+            else:
+                return curr
+        
