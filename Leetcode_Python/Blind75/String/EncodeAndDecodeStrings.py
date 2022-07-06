@@ -20,7 +20,7 @@ class Codec:
         """Decodes a single string to a list of strings.
         """
         result, i = [], 0
-        
+           
         while i < len(s):
             j = i
             while s[j] != "#":
