@@ -3,6 +3,9 @@
 
 ##Approach 1: Recrusion - time complexity: O(N), space complexity in worst case: O(N) & in best case: O(logN)
 # Definition for a binary tree node.
+from collections import deque
+
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -16,3 +19,25 @@ class Solution:
             left_height = self.maxDepth(root.left)
             right_height = self.maxDepth(root.right)
             return max(left_height, right_height) + 1
+
+##Approach 2: Iterative with BFS - time complexity: O(N), space complexity: O(N) or O(logN)
+
+class Solution:
+    def maxDepth(self, root: TreeNode) -> int:
+        if not root:
+            return 0
+        
+        level = 0
+        q = deque([root])
+        while q:
+            
+            for i in range(len(q)):
+                node = q.popleft()
+                if node.left:
+                    q.append(node.left)
+                    
+                if node.right:
+                    q.append(node.right)
+                
+            level += 1
+        return level
