@@ -33,7 +33,7 @@ class Solution:
         while q:
             curr = q.popleft()
             curr.left, curr.right = curr.right, curr.left
-            
+                
             if curr.left:
                 q.append(curr.left)
                 
