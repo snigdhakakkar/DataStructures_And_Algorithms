@@ -25,3 +25,12 @@ class Solution:
                 return curr.val
             
             curr = curr.right
+
+##Approach 2: recursive approach
+
+class Solution:
+    def kthSmallest(self, root: TreeNode, k: int) -> int:
+        
+        def inorder(root):
+            return inorder(root.left) + [root.val] + inorder(root.right) if root else []
+        return inorder(root)[k - 1]
