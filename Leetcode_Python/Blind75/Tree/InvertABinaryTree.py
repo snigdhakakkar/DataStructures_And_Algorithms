@@ -28,7 +28,7 @@ class Solution:
     def invertTree(self, root: TreeNode) -> TreeNode:
         if not root:
             return None
-        
+            
         q = deque([root])
         while q:
             curr = q.popleft()
