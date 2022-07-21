@@ -13,7 +13,7 @@ class Solution:
         n = 0 
         stack = []
         curr = root
-        
+          
         while True:
             while curr:
                 stack.append(curr)
