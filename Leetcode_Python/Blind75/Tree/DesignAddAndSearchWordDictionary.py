@@ -46,7 +46,7 @@ class WordDictionary:
                     curr = curr.children[c]   
             return curr.endOfWord
         return dfs(0, self.root)
-            
+               
         
 
 
