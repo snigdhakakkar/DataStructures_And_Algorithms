@@ -10,6 +10,7 @@
 ##Approach 2: checking the start of each word at the same time simultaneously at each position in the grid
 ##use a trie (prefix tree)
 
+from collections import Counter
 from typing import List
 
 
@@ -29,9 +30,10 @@ class TrieNode:
 class Solution:
     def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
         root = TrieNode()
-
         for w in words:
-            root.addWord(w)
+    
+            for c in w:
+                root.addWord(w)
 
         ROWS, COLS = len(board), len(board[0])
 
