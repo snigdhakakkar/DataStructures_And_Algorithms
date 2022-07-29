@@ -61,3 +61,24 @@ class Solution:
                 copied_chars += 1
                 
         return copied_chars
+
+## Approach 2:
+class Solution:
+    def read(self, buf, n):
+        """
+        :type buf: Destination buffer (List[str])
+        :type n: Number of characters to read (int)
+        :rtype: The number of actual characters read (int)
+        """
+        buf4 = ['']*4
+        num_read = 0
+        EOF = False
+        
+        while num_read < n and not EOF:
+            curr_read = read4(buf4)
+            delta = min(curr_read, n - num_read)
+            buf[num_read: num_read + delta] = buf4[:delta]
+            num_read += delta
+            if curr_read < 4: 
+                EOF = True
+        return num_read
