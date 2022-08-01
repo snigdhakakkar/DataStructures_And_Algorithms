@@ -20,4 +20,4 @@ class Solution:
             if s[i] != t[i]:
                 return s[i+1:] == t[i+1:] or s[i:] == t[i+1:]
             
-        return True    
+        return True       
