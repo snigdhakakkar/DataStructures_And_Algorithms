@@ -15,7 +15,7 @@
 # The replacement must be in place and use only constant extra memory.
 
 from typing import List
-
+   
 
 class Solution:
     def nextPermutation(self, nums: List[int]) -> None:
