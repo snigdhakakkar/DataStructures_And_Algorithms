@@ -16,7 +16,7 @@ class Solution:
                 self.curr_read = read4(self.buf4)
                 self.curr_used = 0
                 if self.curr_read == 0:
-                    self.EOF = True
+                    self.EOF = True   
             else:
                 delta = min(self.curr_read - self.curr_used, n - num_read)
                 buf[num_read: num_read + delta] = self.buf4[self.curr_used:
