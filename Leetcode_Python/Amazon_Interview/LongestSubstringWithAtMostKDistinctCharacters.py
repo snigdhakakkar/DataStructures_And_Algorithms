@@ -24,4 +24,24 @@ class Solution:
             max_len = max(max_len, r - l + 1)
             
         return max_len
+
+##Approach 2: Optimized
+class Solution:
+    def lengthOfLongestSubstringKDistinct(self, s: str, k: int) -> int:
+        if not s or not k:
+            return 0
+        
+        window = dict()
+        max_len = 0
+        l = -1
+        
+        for r, char in enumerate(s): #O(n)
+            window[char] = r
+            if len(window) > k: #O(k)
+                l = min(window.values())
+                window.pop(s[l])
                 
+                
+            max_len = max(max_len, r - l)
+            
+        return max_len
