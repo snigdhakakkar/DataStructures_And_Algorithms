@@ -19,4 +19,4 @@ class Solution:
             else:
                 stack.append(c)
                 
-        return True if not stack else False
+        return True if not stack else False   
