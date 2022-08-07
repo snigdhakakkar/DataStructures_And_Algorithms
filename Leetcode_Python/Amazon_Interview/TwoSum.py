@@ -14,4 +14,4 @@ class Solution:
             if complement in hashmap:
                 return [hashmap[complement], i]
             hashmap[n] = i
-        return
+        return   
