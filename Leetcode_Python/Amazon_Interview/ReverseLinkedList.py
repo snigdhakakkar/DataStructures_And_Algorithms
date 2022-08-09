@@ -19,3 +19,14 @@ class Solution:
         return prev
 
 ##Approach 2: Recursive approach (time complexity: O(N), space complexity: O(N))
+class Solution:
+    def reverseList(self, head: ListNode) -> ListNode:
+        if not head: ##base case
+            return None
+        
+        newHead = head ##final head after reversing initialized from the current head
+        if head.next: ##list has not ended
+            newHead = self.reverseList(head.next) 
+            head.next.next = head
+        head.next = None
+        return newHead
