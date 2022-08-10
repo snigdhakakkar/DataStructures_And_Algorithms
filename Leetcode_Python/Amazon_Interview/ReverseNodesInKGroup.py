@@ -11,7 +11,7 @@ class ListNode:
         self.val = val
         self.next = next
 
-class Solution:
+class Solution:   
     def reverseKGroup(self, head: ListNode, k: int) -> ListNode:
         dummy = ListNode(0, head) ##initializing a dummy node
         groupPrev = dummy ##setting a group previous
