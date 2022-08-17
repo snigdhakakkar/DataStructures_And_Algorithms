@@ -16,6 +16,7 @@
 # "hit" -> "hot" -> "lot" -> "log" -> "cog"
 
 import collections
+from typing import List
 class Solution:
     def findLadders(self, beginWord: str, endWord: str, wordList: List[str]) -> List[List[str]]:
         if endWord not in wordList:
@@ -28,7 +29,7 @@ class Solution:
             for j in range(len(word)):
                 pattern = word[:j] + "*" + word[j+1:]
                 nei[pattern].append(word)
-                
+                   
                 
         '''
         graph = collections.defaultdict(list)
