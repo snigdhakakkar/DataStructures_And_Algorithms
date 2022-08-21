@@ -14,7 +14,7 @@ class TreeNode:
 class Solution:
     def isValidBST(self, root: TreeNode) -> bool:
         
-        def valid(node, left, right):
+        def valid(node, left, right):   
             if not node:
                 return True
             
