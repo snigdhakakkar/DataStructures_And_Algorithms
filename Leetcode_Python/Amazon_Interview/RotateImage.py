@@ -51,7 +51,7 @@ class SolutionI:
                 matrix[bottom][r - i] = matrix[top + i][r]
                 
                 matrix[top + i][r] = topLeft
-                    
+                       
             r -= 1
             l += 1
 
