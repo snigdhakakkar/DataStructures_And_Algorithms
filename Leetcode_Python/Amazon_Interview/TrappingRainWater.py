@@ -20,7 +20,7 @@ class Solution:
         l, r = 0, len(height) - 1
         leftMax, rightMax = height[l], height[r]
         res = 0
-        
+           
         while l<r:
             if leftMax < rightMax:
                 l += 1
