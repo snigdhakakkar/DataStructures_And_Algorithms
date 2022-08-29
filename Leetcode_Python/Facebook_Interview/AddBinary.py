@@ -13,7 +13,7 @@ class Solution:
             total = digitA + digitB + carry
             char = str(total%2)
             
-            res = char + res
+            res = char + res    
             
             carry = total // 2
             
