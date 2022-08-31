@@ -31,7 +31,7 @@ class Solution(object):
 
         oldToNew = {} #hashmap to map old nodes to the new nodes
         def dfs(node):
-            if node in oldToNew:
+            if node in oldToNew:   
                 return oldToNew[node]
             
             copy = Node(node.val)
