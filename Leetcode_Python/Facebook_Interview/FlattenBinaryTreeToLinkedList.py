@@ -35,4 +35,4 @@ class Solution:
             last = rightTail or leftTail or root
             return last
         
-        dfs(root)
+        dfs(root)   
