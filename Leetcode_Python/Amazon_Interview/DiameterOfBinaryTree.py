@@ -26,5 +26,5 @@ class Solution:
             return 1 + max(leftHeight, rightHeight) ##returning the height
         
         dfs(root) ##calling the dfs function
-        return res[0] ##returning the answer  
+        return res[0] ##returning the answer     
         
