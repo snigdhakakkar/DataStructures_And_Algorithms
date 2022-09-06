@@ -8,7 +8,7 @@
 
 
 # Definition for singly-linked list.
-from typing import List
+from typing import List   
 
 
 class ListNode:
