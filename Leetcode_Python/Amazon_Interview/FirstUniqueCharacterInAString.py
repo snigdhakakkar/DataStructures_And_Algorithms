@@ -13,4 +13,4 @@ class Solution:
         for idx, char in enumerate(s):
             if count[char] == 1:
                 return idx
-        return -1     
+        return -1       
