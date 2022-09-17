@@ -9,7 +9,7 @@ class Solution:
         
         stack = []
         res = []
-        
+            
         def backTrack(openN, closeN):
             if openN == closeN == n:
                 res.append("".join(stack))
