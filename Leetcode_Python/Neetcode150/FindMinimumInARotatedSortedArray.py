@@ -39,3 +39,29 @@ class Solution:
             # if nums[0] is greater than the mid value then this means the smallest value is somewhere to the left
             else:
                 right = mid - 1
+
+#Approach 2:
+class Solution:
+    def findMin(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        res = nums[0]
+        l, r = 0, len(nums)-1
+        
+        while l <= r:
+            if nums[l] < nums[r]: #sorted array with no rotation case
+                res = min(res, nums[l])
+                break
+            
+            mid = l + (r - l) // 2
+            res = min(res, nums[mid])
+            
+            if nums[mid] >= nums[l]:
+                l = mid + 1
+                
+            else:
+                r = mid - 1
+                
+        return res
