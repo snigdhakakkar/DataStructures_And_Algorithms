@@ -27,7 +27,7 @@ class Solution:
             tmp = groupPrev.next ##storing groupPrev.next i.e. present head
             groupPrev.next = kth ## Now, updating links of groupPrev.next as list has reversed
             groupPrev = tmp ## Updating the groupPrev pointer to next kth group prev
-            
+              
         return dummy.next
             
     def getKth(self, curr, k):
