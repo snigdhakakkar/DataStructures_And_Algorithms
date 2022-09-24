@@ -3,7 +3,7 @@ class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val        
         self.next = next
-        
+
 from typing import List
 
 
@@ -23,7 +23,7 @@ class Solution:
                 
             lists = mergedList
         return lists[0]
-        
+           
         
     def mergeList(self, l1, l2):
         dummy = ListNode()
