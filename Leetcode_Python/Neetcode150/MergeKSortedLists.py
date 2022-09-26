@@ -23,7 +23,7 @@ class Solution:
                 
             lists = mergedList
         return lists[0]
-              
+                 
         
     def mergeList(self, l1, l2):
         dummy = ListNode()
