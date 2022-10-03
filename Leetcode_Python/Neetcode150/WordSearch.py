@@ -1,0 +1,76 @@
+from typing import List
+
+#Approach 1
+class Solution(object):
+    def exist(self, board: List[List[str]], word: str) -> bool:
+        ROWS, COLS = len(board), len(board[0])
+        path = set()
+        
+        def dfs(r, c, i):
+            if i == len(word):
+                return True
+            
+            if (r < 0 or c < 0 or r >= ROWS or c >= COLS or 
+                board[r][c] != word[i]
+               or (r,c) in path):
+                return False
+            
+            path.add((r,c))
+            
+            res = (dfs(r + 1, c, i + 1) or
+                  dfs(r - 1, c, i + 1) or
+                  dfs(r, c + 1, i + 1) or 
+                  dfs(r, c - 1, i + 1))
+            
+            path.remove((r,c))
+            
+            return res
+        
+        for r in range(ROWS):
+            for c in range(COLS):
+                if dfs(r,c, 0):
+                    return True
+                
+        return False
+    
+    #O(n * m * dfs) where dfs call stack is 4^n as it is being called four times.
+
+    ##Approach 2
+    class Solution(object):
+        def exist(self, board: List[List[str]], word: str) -> bool:
+            self.ROWS, self.COLS = len(board), len(board[0])
+            self.board = board
+        
+            for r in range(self.ROWS):
+                for c in range(self.COLS):
+                    if self.dfs(r,c, word):
+                        return True
+                
+            return False
+    
+    def dfs(self, r, c, suffix):
+        if len(suffix) == 0:
+            return True
+            
+        if (r < 0 or c < 0 or r >= self.ROWS or c >= self.COLS 
+            or self.board[r][c] != suffix[0]):
+            return False
+        
+        result = False
+        # mark the choice before exploring further.
+        self.board[r][c] = '#'
+        
+        # explore the 4 neighbor directions
+        for rowOffset, colOffset in [(0, 1), (1, 0), (0, -1), (-1, 0)]:
+            result = self.dfs(r + rowOffset, c + colOffset, suffix[1:])
+            # break instead of return directly to do some cleanup afterwards
+            if result:
+                return True
+                
+        #revert the change, a clean slate and no side-effect
+        self.board[r][c] = suffix[0]
+        
+        return result
+            
+            
+            
