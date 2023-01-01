@@ -4,6 +4,7 @@
 ## Approach 1: create a separate list to store the result. Check if each number in one list is there in the another, copy it to
 ## the result array, and remove it from list 2. 
 
+from collections import Counter
 from typing import List
 
 
@@ -22,3 +23,16 @@ class Solution:
 ## chunks of data of the array which fits in the memory and record the transactions.
 
 ## If it is the case that both the lists do not come in the memory, then sort them externally and compare two elements each at one time.
+
+##Approach 2: Using counter object
+class Solution:
+    def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        c = Counter(nums1)
+        result = []
+        
+        for i in nums2:
+            if c[i] > 0:
+                result.append(i)
+                c[i] -= 1
+                
+        return result
