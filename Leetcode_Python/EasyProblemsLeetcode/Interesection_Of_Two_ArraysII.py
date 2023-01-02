@@ -25,6 +25,8 @@ class Solution:
 ## If it is the case that both the lists do not come in the memory, then sort them externally and compare two elements each at one time.
 
 ##Approach 2: Using counter object
+## time complexity: O(n + m)
+## space complexity: O(n)
 class Solution:
     def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
         c = Counter(nums1)
