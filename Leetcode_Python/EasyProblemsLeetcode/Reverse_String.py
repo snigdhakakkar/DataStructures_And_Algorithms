@@ -29,3 +29,17 @@ class Solution:
         while stack:
             s[i] = stack.pop()
             i += 1
+
+##Approach 3: Recursion - time complexity: O(N), space complexity: O(N)
+
+class Solution:
+    def reverseString(self, s: List[str]) -> None:
+        """
+        Do not return anything, modify s in-place instead.
+        """
+        def reverse(l,r):
+            if l < r:
+                s[l], s[r] = s[r], s[l]
+                reverse(l + 1, r - 1)
+                
+        reverse(0, len(s)-1)
