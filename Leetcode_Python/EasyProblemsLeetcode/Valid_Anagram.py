@@ -15,3 +15,12 @@ class Solution:
                 return False
             
         return True
+
+##Approach 2: Sorting
+# time complexity: O(NlogN)
+# space complexity: O(1)
+
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        return sorted(s) == sorted(t)
+
