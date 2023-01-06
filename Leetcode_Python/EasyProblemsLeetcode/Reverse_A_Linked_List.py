@@ -21,3 +21,18 @@ class SolutionI:
 
 ##Recursive Approach
 # time complexity: O(N), space complexity: O(N)
+
+class SolutionII:
+    def reverseList(self, head: ListNode) -> ListNode:
+        
+        ##base case
+        if not head:
+            return None
+        
+        newHead= head
+        if head.next != None:
+            newHead = self.reverseList(head.next)
+            head.next.next = head
+        head.next = None
+        
+        return newHead
