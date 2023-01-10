@@ -1,5 +1,20 @@
 ## Approach 1: Bruteforce : Recursion (DFS): time complexity - O(2^n)
 
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        
+    
+        def climb_Stairs(i, n):
+            if i > n:
+                return 0
+            if i == n:
+                return 1
+            
+            return climb_Stairs(i+1, n) + climb_Stairs(i+2, n)
+        
+        return climb_Stairs(0,n)
+            
+
 ## Approach 2: Memoization: O(n) - caching the results
 
 ## Approach 3: Bottom Up DP : O(N)
@@ -17,4 +32,3 @@ class Solution:
         return one
 
 
-        
