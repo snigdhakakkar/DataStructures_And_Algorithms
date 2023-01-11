@@ -16,7 +16,7 @@ class Solution:
         
         return max_subarray
 
-## Approach 3: Ignore negative prefixes. Keep positive prefixes. 
+## Approach 3: Ignore negative prefixes. Keep positive prefixes. : time complexity - O(N)
 
 from typing import List
 
