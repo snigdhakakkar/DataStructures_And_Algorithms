@@ -27,8 +27,30 @@ class Solution:
         self.memo[i] = ans
         return ans
 
+## DP Bottom Up Approach - time complexity: O(N), space complexity: O(N)
 
+class Solution:
+    
+    def rob(self, nums: List[int]) -> int:
+        
+        #edge case
+        if not nums:
+            return 0
+        
+        maxRobbedAmount = [None for _ in range(len(nums) + 1)]
+        N = len(nums)
+        
+        ##base case initialization
+        maxRobbedAmount[N], maxRobbedAmount[N-1] = 0, nums[N-1]
+        
+        ##dp computation bottom up
+        for i in range(N-2, -1, -1):
+            
+            maxRobbedAmount[i] = max(maxRobbedAmount[i+1], maxRobbedAmount[i+2] + nums[i])
+            
+        return maxRobbedAmount[0]
 
+        
 ## Optimized DP Approach: time complexity - O(N)
 from typing import List
 
